@@ -32,8 +32,8 @@ class RegisterVC: BaseViewController {
     }
     
     @IBAction func tapOnRegister(_ sender: Any) {
-        startAnimating()
         view.endEditing(true)
+        self.startAnimating()
         if tfEmail.text == "" || tfPassword.text == "" || tfConfirmPassword.text == "" {
             showToast(message: "You have to fill all information")
             stopAnimating()
@@ -66,7 +66,7 @@ class RegisterVC: BaseViewController {
                 self.showToast(message: "Something went wrong, please try again later")
                 self.stopAnimating()
             } else {
-                if let id = authData?.user.providerID {
+                if let id = authData?.user.uid {
                     let user = User(email: email, id: id, password: password)
                     databaseReference.child("Users").child(id).setValue(user.asDictionary())
                     self.stopAnimating()

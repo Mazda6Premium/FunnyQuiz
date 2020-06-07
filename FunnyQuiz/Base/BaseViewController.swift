@@ -16,7 +16,13 @@ class BaseViewController: UIViewController {
     let viewIndicator = UIView()
     var loadingIndicator: NVActivityIndicatorView?
     
-    func startAnimating() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupIndicator()
+    }
+    
+    func setupIndicator() {
         viewIndicator.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         roundCorner(views: [viewIndicator], radius: CORNER_VIEW_LOADING)
         view.addSubview(viewIndicator)
@@ -25,10 +31,15 @@ class BaseViewController: UIViewController {
         viewIndicator.heightAnchor.constraint(equalToConstant: 60).isActive = true
         viewIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         viewIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        viewIndicator.isHidden = true
         
         let frame = CGRect(x: 15, y: 15, width: 30, height: 30)
         loadingIndicator = NVActivityIndicatorView(frame: frame, type: NVActivityIndicatorType.lineScale, color: .white, padding: 0)
         viewIndicator.addSubview(loadingIndicator!)
+    }
+    
+    func startAnimating() {
+        viewIndicator.isHidden = false
         loadingIndicator?.startAnimating()
     }
     
@@ -76,7 +87,7 @@ class BaseViewController: UIViewController {
     
     func showToast(message: String, duration: Double = 3) {
         var style = ToastStyle()
-        style.backgroundColor = #colorLiteral(red: 0, green: 0.4980392157, blue: 0.6470588235, alpha: 1)
+        style.backgroundColor = #colorLiteral(red: 0.3450980392, green: 0.337254902, blue: 0.8392156863, alpha: 1)
         style.messageColor = .white
         style.messageFont = UIFont.boldSystemFont(ofSize: 16)
         self.view.makeToast(message, duration: duration, position: .bottom, style: style)

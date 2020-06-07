@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: BaseViewController {
     
@@ -19,6 +20,11 @@ class ViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setupUI()
+    }
+    
+    func setupUI() {
+        roundCorner(views: [btLogin], radius: CORNER_BUTTON)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,6 +32,26 @@ class ViewController: BaseViewController {
     }
     
     @IBAction func tapOnLogin(_ sender: Any) {
+        self.view.endEditing(true)
+        self.startAnimating()
+        if tfEmail.text == "" || tfPassword.text == "" {
+            showToast(message: "You have to fill all information")
+            stopAnimating()
+        } else {
+            Auth.auth().signIn(withEmail: tfEmail.text!, password: tfPassword.text!) { (authData, error) in
+                if error != nil {
+                    self.showToast(message: error!.localizedDescription)
+                    self.stopAnimating()
+                } else {
+                    let vc = UIStoryboard(name: "Tabbar", bundle: nil).instantiateViewController(withIdentifier: "tabbarVC")
+                    vc.modalTransitionStyle = .crossDissolve
+                    vc.modalPresentationStyle = .overFullScreen
+                    self.present(vc, animated: true, completion: nil)
+                    self.stopAnimating()
+                }
+            }
+        }
+
     }
     
     @IBAction func tapOnRegister(_ sender: Any) {
