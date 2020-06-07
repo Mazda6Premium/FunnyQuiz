@@ -15,6 +15,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterVC" customModule="FunnyQuiz" customModuleProvider="target">
             <connections>
+                <outlet property="btRegister" destination="4Rg-x6-5z0" id="ySe-WG-Gs9"/>
+                <outlet property="tfConfirmPassword" destination="W7H-kB-Zf8" id="27G-G3-3be"/>
+                <outlet property="tfEmail" destination="oAt-pX-rjv" id="Kg5-l3-zyl"/>
+                <outlet property="tfPassword" destination="ZL0-kz-rxa" id="CCZ-Ia-f32"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,13 +35,13 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAB-PZ-z4k">
-                    <rect key="frame" x="60" y="314" width="294" height="21.5"/>
+                    <rect key="frame" x="60" y="304" width="294" height="21.5"/>
                     <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oAt-pX-rjv">
-                    <rect key="frame" x="60" y="355.5" width="294" height="36"/>
+                    <rect key="frame" x="60" y="345.5" width="294" height="36"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="36" id="Ien-x9-AL6"/>
@@ -47,14 +51,14 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="09u-Nt-dXw">
-                    <rect key="frame" x="60" y="392.5" width="294" height="1"/>
+                    <rect key="frame" x="60" y="382.5" width="294" height="1"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="wl6-MW-Wxy"/>
                     </constraints>
                 </view>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZL0-kz-rxa">
-                    <rect key="frame" x="60" y="413.5" width="294" height="36"/>
+                    <rect key="frame" x="60" y="403.5" width="294" height="36"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="36" id="6xf-rV-xWS"/>
@@ -64,14 +68,14 @@
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkz-Kn-gwH">
-                    <rect key="frame" x="60" y="450.5" width="294" height="1"/>
+                    <rect key="frame" x="60" y="440.5" width="294" height="1"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="lr8-Ei-WHv"/>
                     </constraints>
                 </view>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W7H-kB-Zf8">
-                    <rect key="frame" x="60" y="471.5" width="294" height="36"/>
+                    <rect key="frame" x="60" y="461.5" width="294" height="36"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="36" id="pxd-EP-quX"/>
@@ -81,14 +85,14 @@
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Got-qn-GTE">
-                    <rect key="frame" x="60" y="508.5" width="294" height="1"/>
+                    <rect key="frame" x="60" y="498.5" width="294" height="1"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="Ryh-GG-5wR"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rg-x6-5z0">
-                    <rect key="frame" x="147" y="609.5" width="120" height="40"/>
+                    <rect key="frame" x="147" y="599.5" width="120" height="40"/>
                     <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="120" id="KE6-vY-jGO"/>
@@ -98,6 +102,9 @@
                     <state key="normal" title="Register">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="tapOnRegister:" destination="-1" eventType="touchUpInside" id="jDg-2i-c4D"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.65098039215686276" green="0.36470588235294116" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -120,7 +127,7 @@
                 <constraint firstItem="ZL0-kz-rxa" firstAttribute="leading" secondItem="oAt-pX-rjv" secondAttribute="leading" id="XIG-QB-Etv"/>
                 <constraint firstItem="hkz-Kn-gwH" firstAttribute="leading" secondItem="09u-Nt-dXw" secondAttribute="leading" id="dry-Ye-HD5"/>
                 <constraint firstItem="W7H-kB-Zf8" firstAttribute="trailing" secondItem="ZL0-kz-rxa" secondAttribute="trailing" id="f6i-Gv-5f7"/>
-                <constraint firstItem="wAB-PZ-z4k" firstAttribute="top" secondItem="872-OV-Gyh" secondAttribute="bottom" constant="70" id="kVe-KY-bYK"/>
+                <constraint firstItem="wAB-PZ-z4k" firstAttribute="top" secondItem="872-OV-Gyh" secondAttribute="bottom" constant="60" id="kVe-KY-bYK"/>
                 <constraint firstItem="Got-qn-GTE" firstAttribute="top" secondItem="W7H-kB-Zf8" secondAttribute="bottom" constant="1" id="lbv-ke-Yt8"/>
                 <constraint firstItem="4Rg-x6-5z0" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="mwY-Fs-NAO"/>
                 <constraint firstItem="wAB-PZ-z4k" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="pcl-kU-1Fn"/>

@@ -8,16 +8,33 @@
 
 import UIKit
 import Foundation
+import NVActivityIndicatorView
+import Toast_Swift
 
 class BaseViewController: UIViewController {
     
-    // Screen width.
-    public var screenWidth: CGFloat {
-        return UIScreen.main.bounds.width
+    let viewIndicator = UIView()
+    var loadingIndicator: NVActivityIndicatorView?
+    
+    func startAnimating() {
+        viewIndicator.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        roundCorner(views: [viewIndicator], radius: CORNER_VIEW_LOADING)
+        view.addSubview(viewIndicator)
+        viewIndicator.translatesAutoresizingMaskIntoConstraints = false
+        viewIndicator.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        viewIndicator.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        viewIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        viewIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
+        let frame = CGRect(x: 15, y: 15, width: 30, height: 30)
+        loadingIndicator = NVActivityIndicatorView(frame: frame, type: NVActivityIndicatorType.lineScale, color: .white, padding: 0)
+        viewIndicator.addSubview(loadingIndicator!)
+        loadingIndicator?.startAnimating()
     }
     
-    public var screenHeight: CGFloat {
-        return UIScreen.main.bounds.height
+    func stopAnimating() {
+        loadingIndicator?.stopAnimating()
+        viewIndicator.isHidden = true
     }
     
     func setupNavigationController(titleName: String) {
@@ -57,13 +74,13 @@ class BaseViewController: UIViewController {
         }
     }
     
-//    func showToast(message: String, duration: Double = 3) {
-//        var style = ToastStyle()
-//        style.backgroundColor = #colorLiteral(red: 0, green: 0.4980392157, blue: 0.6470588235, alpha: 1)
-//        style.messageColor = .white
-//        style.messageFont = UIFont.boldSystemFont(ofSize: 16)
-//        self.view.makeToast(message, duration: duration, position: .bottom, style: style)
-//    }
+    func showToast(message: String, duration: Double = 3) {
+        var style = ToastStyle()
+        style.backgroundColor = #colorLiteral(red: 0, green: 0.4980392157, blue: 0.6470588235, alpha: 1)
+        style.messageColor = .white
+        style.messageFont = UIFont.boldSystemFont(ofSize: 16)
+        self.view.makeToast(message, duration: duration, position: .bottom, style: style)
+    }
     
     func addShadow(views: [UIView]) {
         views.forEach { (view) in

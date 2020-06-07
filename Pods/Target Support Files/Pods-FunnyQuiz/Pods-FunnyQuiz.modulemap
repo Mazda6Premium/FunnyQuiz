@@ -1,0 +1,6 @@
+framework module Pods_FunnyQuiz {
+  umbrella header "Pods-FunnyQuiz-umbrella.h"
+
+  export *
+  module * { export * }
+}

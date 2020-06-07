@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		465A285BE2C6E704112BA5FB /* Pods_FunnyQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8732FED21292212D8C709A2D /* Pods_FunnyQuiz.framework */; };
 		A8471A1A248D2AC4004A80BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8471A19248D2AC4004A80BD /* AppDelegate.swift */; };
 		A8471A1C248D2AC4004A80BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8471A1B248D2AC4004A80BD /* SceneDelegate.swift */; };
 		A8471A1E248D2AC4004A80BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8471A1D248D2AC4004A80BD /* ViewController.swift */; };
@@ -21,9 +22,16 @@
 		A8471A41248D3B4A004A80BD /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8471A3F248D3B4A004A80BD /* RegisterVC.swift */; };
 		A8471A42248D3B4A004A80BD /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8471A40248D3B4A004A80BD /* RegisterVC.xib */; };
 		A8471A45248D3FF4004A80BD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8471A44248D3FF4004A80BD /* BaseViewController.swift */; };
+		A8471A47248D481F004A80BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A8471A46248D481F004A80BD /* GoogleService-Info.plist */; };
+		A8471A49248D50C4004A80BD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8471A48248D50C4004A80BD /* Extensions.swift */; };
+		A8471A4B248D542C004A80BD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8471A4A248D542C004A80BD /* User.swift */; };
+		A8471A4D248D55A0004A80BD /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8471A4C248D55A0004A80BD /* Tabbar.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C93E7E2137CD065510360AD /* Pods-FunnyQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunnyQuiz.release.xcconfig"; path = "Target Support Files/Pods-FunnyQuiz/Pods-FunnyQuiz.release.xcconfig"; sourceTree = "<group>"; };
+		8732FED21292212D8C709A2D /* Pods_FunnyQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunnyQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E8374FE6B4F3F09C774EDC8 /* Pods-FunnyQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunnyQuiz.debug.xcconfig"; path = "Target Support Files/Pods-FunnyQuiz/Pods-FunnyQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 		A8471A16248D2AC4004A80BD /* FunnyQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunnyQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8471A19248D2AC4004A80BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8471A1B248D2AC4004A80BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +48,10 @@
 		A8471A3F248D3B4A004A80BD /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		A8471A40248D3B4A004A80BD /* RegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
 		A8471A44248D3FF4004A80BD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A8471A46248D481F004A80BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A8471A48248D50C4004A80BD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A8471A4A248D542C004A80BD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = FunnyQuiz/Base/User.swift; sourceTree = SOURCE_ROOT; };
+		A8471A4C248D55A0004A80BD /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +59,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465A285BE2C6E704112BA5FB /* Pods_FunnyQuiz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5ADE5D982B3D0B48E60F707C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E8374FE6B4F3F09C774EDC8 /* Pods-FunnyQuiz.debug.xcconfig */,
+				6C93E7E2137CD065510360AD /* Pods-FunnyQuiz.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A8471A0D248D2AC4004A80BD = {
 			isa = PBXGroup;
 			children = (
 				A8471A18248D2AC4004A80BD /* FunnyQuiz */,
 				A8471A17248D2AC4004A80BD /* Products */,
+				5ADE5D982B3D0B48E60F707C /* Pods */,
+				D64A3100FF84B6FE02B22400 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +106,7 @@
 				A8471A22248D2AC5004A80BD /* Assets.xcassets */,
 				A8471A24248D2AC5004A80BD /* LaunchScreen.storyboard */,
 				A8471A27248D2AC5004A80BD /* Info.plist */,
+				A8471A46248D481F004A80BD /* GoogleService-Info.plist */,
 			);
 			path = FunnyQuiz;
 			sourceTree = "<group>";
@@ -100,6 +125,7 @@
 		A8471A36248D350E004A80BD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A8471A4A248D542C004A80BD /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -108,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				A8471A1F248D2AC4004A80BD /* Main.storyboard */,
+				A8471A4C248D55A0004A80BD /* Tabbar.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -117,6 +144,7 @@
 			children = (
 				A8471A3A248D3939004A80BD /* Constant.swift */,
 				A8471A44248D3FF4004A80BD /* BaseViewController.swift */,
+				A8471A48248D50C4004A80BD /* Extensions.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -147,6 +175,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		D64A3100FF84B6FE02B22400 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8732FED21292212D8C709A2D /* Pods_FunnyQuiz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,9 +190,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8471A2A248D2AC5004A80BD /* Build configuration list for PBXNativeTarget "FunnyQuiz" */;
 			buildPhases = (
+				1AC48C608B35542AF807529B /* [CP] Check Pods Manifest.lock */,
 				A8471A12248D2AC4004A80BD /* Sources */,
 				A8471A13248D2AC4004A80BD /* Frameworks */,
 				A8471A14248D2AC4004A80BD /* Resources */,
+				C0F2E2AF3491FD3AB31E0516 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -205,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8471A4D248D55A0004A80BD /* Tabbar.storyboard in Resources */,
 				A8471A26248D2AC5004A80BD /* LaunchScreen.storyboard in Resources */,
 				A8471A34248D2C8A004A80BD /* Quicksand-Regular.ttf in Resources */,
 				A8471A35248D2C8A004A80BD /* Quicksand-Medium.ttf in Resources */,
@@ -212,11 +251,83 @@
 				A8471A21248D2AC4004A80BD /* Main.storyboard in Resources */,
 				A8471A42248D3B4A004A80BD /* RegisterVC.xib in Resources */,
 				A8471A32248D2C8A004A80BD /* Quicksand-Bold.ttf in Resources */,
+				A8471A47248D481F004A80BD /* GoogleService-Info.plist in Resources */,
 				A8471A33248D2C8A004A80BD /* Quicksand-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AC48C608B35542AF807529B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FunnyQuiz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0F2E2AF3491FD3AB31E0516 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FunnyQuiz/Pods-FunnyQuiz-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
+				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SimpleImageViewer/SimpleImageViewer.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleImageViewer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FunnyQuiz/Pods-FunnyQuiz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A8471A12248D2AC4004A80BD /* Sources */ = {
@@ -227,8 +338,10 @@
 				A8471A1A248D2AC4004A80BD /* AppDelegate.swift in Sources */,
 				A8471A1C248D2AC4004A80BD /* SceneDelegate.swift in Sources */,
 				A8471A3B248D3939004A80BD /* Constant.swift in Sources */,
+				A8471A4B248D542C004A80BD /* User.swift in Sources */,
 				A8471A41248D3B4A004A80BD /* RegisterVC.swift in Sources */,
 				A8471A45248D3FF4004A80BD /* BaseViewController.swift in Sources */,
+				A8471A49248D50C4004A80BD /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +483,7 @@
 		};
 		A8471A2B248D2AC5004A80BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E8374FE6B4F3F09C774EDC8 /* Pods-FunnyQuiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -389,6 +503,7 @@
 		};
 		A8471A2C248D2AC5004A80BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C93E7E2137CD065510360AD /* Pods-FunnyQuiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
