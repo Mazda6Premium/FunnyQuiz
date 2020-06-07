@@ -17,6 +17,10 @@
 		A8471A33248D2C8A004A80BD /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8471A2F248D2C8A004A80BD /* Quicksand-Light.ttf */; };
 		A8471A34248D2C8A004A80BD /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8471A30248D2C8A004A80BD /* Quicksand-Regular.ttf */; };
 		A8471A35248D2C8A004A80BD /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8471A31248D2C8A004A80BD /* Quicksand-Medium.ttf */; };
+		A8471A3B248D3939004A80BD /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8471A3A248D3939004A80BD /* Constant.swift */; };
+		A8471A41248D3B4A004A80BD /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8471A3F248D3B4A004A80BD /* RegisterVC.swift */; };
+		A8471A42248D3B4A004A80BD /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8471A40248D3B4A004A80BD /* RegisterVC.xib */; };
+		A8471A45248D3FF4004A80BD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8471A44248D3FF4004A80BD /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		A8471A2F248D2C8A004A80BD /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
 		A8471A30248D2C8A004A80BD /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
 		A8471A31248D2C8A004A80BD /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		A8471A3A248D3939004A80BD /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		A8471A3F248D3B4A004A80BD /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		A8471A40248D3B4A004A80BD /* RegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
+		A8471A44248D3FF4004A80BD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,13 +72,13 @@
 		A8471A18248D2AC4004A80BD /* FunnyQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				A8471A38248D351D004A80BD /* Controller */,
+				A8471A3D248D3B1E004A80BD /* Controller */,
+				A8471A39248D3926004A80BD /* Base */,
 				A8471A37248D3516004A80BD /* View */,
 				A8471A36248D350E004A80BD /* Model */,
 				A8471A2D248D2C77004A80BD /* Fonts */,
 				A8471A19248D2AC4004A80BD /* AppDelegate.swift */,
 				A8471A1B248D2AC4004A80BD /* SceneDelegate.swift */,
-				A8471A1D248D2AC4004A80BD /* ViewController.swift */,
 				A8471A22248D2AC5004A80BD /* Assets.xcassets */,
 				A8471A24248D2AC5004A80BD /* LaunchScreen.storyboard */,
 				A8471A27248D2AC5004A80BD /* Info.plist */,
@@ -104,11 +112,39 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		A8471A38248D351D004A80BD /* Controller */ = {
+		A8471A39248D3926004A80BD /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				A8471A3A248D3939004A80BD /* Constant.swift */,
+				A8471A44248D3FF4004A80BD /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A8471A3D248D3B1E004A80BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A8471A43248D3DD5004A80BD /* Login */,
+				A8471A3E248D3B27004A80BD /* Register */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A8471A3E248D3B27004A80BD /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				A8471A3F248D3B4A004A80BD /* RegisterVC.swift */,
+				A8471A40248D3B4A004A80BD /* RegisterVC.xib */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		A8471A43248D3DD5004A80BD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A8471A1D248D2AC4004A80BD /* ViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +210,7 @@
 				A8471A35248D2C8A004A80BD /* Quicksand-Medium.ttf in Resources */,
 				A8471A23248D2AC5004A80BD /* Assets.xcassets in Resources */,
 				A8471A21248D2AC4004A80BD /* Main.storyboard in Resources */,
+				A8471A42248D3B4A004A80BD /* RegisterVC.xib in Resources */,
 				A8471A32248D2C8A004A80BD /* Quicksand-Bold.ttf in Resources */,
 				A8471A33248D2C8A004A80BD /* Quicksand-Light.ttf in Resources */,
 			);
@@ -189,6 +226,9 @@
 				A8471A1E248D2AC4004A80BD /* ViewController.swift in Sources */,
 				A8471A1A248D2AC4004A80BD /* AppDelegate.swift in Sources */,
 				A8471A1C248D2AC4004A80BD /* SceneDelegate.swift in Sources */,
+				A8471A3B248D3939004A80BD /* Constant.swift in Sources */,
+				A8471A41248D3B4A004A80BD /* RegisterVC.swift in Sources */,
+				A8471A45248D3FF4004A80BD /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
