@@ -13,6 +13,10 @@
 		A8471A21248D2AC4004A80BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8471A1F248D2AC4004A80BD /* Main.storyboard */; };
 		A8471A23248D2AC5004A80BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8471A22248D2AC5004A80BD /* Assets.xcassets */; };
 		A8471A26248D2AC5004A80BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8471A24248D2AC5004A80BD /* LaunchScreen.storyboard */; };
+		A8471A32248D2C8A004A80BD /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8471A2E248D2C8A004A80BD /* Quicksand-Bold.ttf */; };
+		A8471A33248D2C8A004A80BD /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8471A2F248D2C8A004A80BD /* Quicksand-Light.ttf */; };
+		A8471A34248D2C8A004A80BD /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8471A30248D2C8A004A80BD /* Quicksand-Regular.ttf */; };
+		A8471A35248D2C8A004A80BD /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8471A31248D2C8A004A80BD /* Quicksand-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		A8471A22248D2AC5004A80BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8471A25248D2AC5004A80BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8471A27248D2AC5004A80BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8471A2E248D2C8A004A80BD /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		A8471A2F248D2C8A004A80BD /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
+		A8471A30248D2C8A004A80BD /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		A8471A31248D2C8A004A80BD /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,51 @@
 		A8471A18248D2AC4004A80BD /* FunnyQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				A8471A38248D351D004A80BD /* Controller */,
+				A8471A37248D3516004A80BD /* View */,
+				A8471A36248D350E004A80BD /* Model */,
+				A8471A2D248D2C77004A80BD /* Fonts */,
 				A8471A19248D2AC4004A80BD /* AppDelegate.swift */,
 				A8471A1B248D2AC4004A80BD /* SceneDelegate.swift */,
 				A8471A1D248D2AC4004A80BD /* ViewController.swift */,
-				A8471A1F248D2AC4004A80BD /* Main.storyboard */,
 				A8471A22248D2AC5004A80BD /* Assets.xcassets */,
 				A8471A24248D2AC5004A80BD /* LaunchScreen.storyboard */,
 				A8471A27248D2AC5004A80BD /* Info.plist */,
 			);
 			path = FunnyQuiz;
+			sourceTree = "<group>";
+		};
+		A8471A2D248D2C77004A80BD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A8471A2E248D2C8A004A80BD /* Quicksand-Bold.ttf */,
+				A8471A2F248D2C8A004A80BD /* Quicksand-Light.ttf */,
+				A8471A31248D2C8A004A80BD /* Quicksand-Medium.ttf */,
+				A8471A30248D2C8A004A80BD /* Quicksand-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A8471A36248D350E004A80BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A8471A37248D3516004A80BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A8471A1F248D2AC4004A80BD /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A8471A38248D351D004A80BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +170,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8471A26248D2AC5004A80BD /* LaunchScreen.storyboard in Resources */,
+				A8471A34248D2C8A004A80BD /* Quicksand-Regular.ttf in Resources */,
+				A8471A35248D2C8A004A80BD /* Quicksand-Medium.ttf in Resources */,
 				A8471A23248D2AC5004A80BD /* Assets.xcassets in Resources */,
 				A8471A21248D2AC4004A80BD /* Main.storyboard in Resources */,
+				A8471A32248D2C8A004A80BD /* Quicksand-Bold.ttf in Resources */,
+				A8471A33248D2C8A004A80BD /* Quicksand-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +335,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2J3K999PRZ;
 				INFOPLIST_FILE = FunnyQuiz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +343,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Fighting.FunnyQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,6 +354,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2J3K999PRZ;
 				INFOPLIST_FILE = FunnyQuiz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Fighting.FunnyQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
