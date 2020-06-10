@@ -26,6 +26,10 @@
 		A8471A49248D50C4004A80BD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8471A48248D50C4004A80BD /* Extensions.swift */; };
 		A8471A4B248D542C004A80BD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8471A4A248D542C004A80BD /* User.swift */; };
 		A8471A4D248D55A0004A80BD /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8471A4C248D55A0004A80BD /* Tabbar.storyboard */; };
+		A8BA44C0249128340003C109 /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BA44BF249128340003C109 /* QuizVC.swift */; };
+		A8BA44C32491296C0003C109 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BA44C22491296C0003C109 /* AccountVC.swift */; };
+		A8BA44C724912D110003C109 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BA44C524912D110003C109 /* AccountCell.swift */; };
+		A8BA44C824912D110003C109 /* AccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8BA44C624912D110003C109 /* AccountCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		A8471A48248D50C4004A80BD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A8471A4A248D542C004A80BD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = FunnyQuiz/Base/User.swift; sourceTree = SOURCE_ROOT; };
 		A8471A4C248D55A0004A80BD /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		A8BA44BF249128340003C109 /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
+		A8BA44C22491296C0003C109 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
+		A8BA44C524912D110003C109 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		A8BA44C624912D110003C109 /* AccountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +162,8 @@
 			children = (
 				A8471A43248D3DD5004A80BD /* Login */,
 				A8471A3E248D3B27004A80BD /* Register */,
+				A8BA44BE249127CC0003C109 /* TabQuiz */,
+				A8BA44C1249129350003C109 /* TabAccount */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,6 +183,32 @@
 				A8471A1D248D2AC4004A80BD /* ViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		A8BA44BE249127CC0003C109 /* TabQuiz */ = {
+			isa = PBXGroup;
+			children = (
+				A8BA44BF249128340003C109 /* QuizVC.swift */,
+			);
+			path = TabQuiz;
+			sourceTree = "<group>";
+		};
+		A8BA44C1249129350003C109 /* TabAccount */ = {
+			isa = PBXGroup;
+			children = (
+				A8BA44C424912CF40003C109 /* TableCell */,
+				A8BA44C22491296C0003C109 /* AccountVC.swift */,
+			);
+			path = TabAccount;
+			sourceTree = "<group>";
+		};
+		A8BA44C424912CF40003C109 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				A8BA44C524912D110003C109 /* AccountCell.swift */,
+				A8BA44C624912D110003C109 /* AccountCell.xib */,
+			);
+			path = TableCell;
 			sourceTree = "<group>";
 		};
 		D64A3100FF84B6FE02B22400 /* Frameworks */ = {
@@ -249,6 +285,7 @@
 				A8471A35248D2C8A004A80BD /* Quicksand-Medium.ttf in Resources */,
 				A8471A23248D2AC5004A80BD /* Assets.xcassets in Resources */,
 				A8471A21248D2AC4004A80BD /* Main.storyboard in Resources */,
+				A8BA44C824912D110003C109 /* AccountCell.xib in Resources */,
 				A8471A42248D3B4A004A80BD /* RegisterVC.xib in Resources */,
 				A8471A32248D2C8A004A80BD /* Quicksand-Bold.ttf in Resources */,
 				A8471A47248D481F004A80BD /* GoogleService-Info.plist in Resources */,
@@ -338,9 +375,12 @@
 				A8471A1A248D2AC4004A80BD /* AppDelegate.swift in Sources */,
 				A8471A1C248D2AC4004A80BD /* SceneDelegate.swift in Sources */,
 				A8471A3B248D3939004A80BD /* Constant.swift in Sources */,
+				A8BA44C0249128340003C109 /* QuizVC.swift in Sources */,
 				A8471A4B248D542C004A80BD /* User.swift in Sources */,
+				A8BA44C32491296C0003C109 /* AccountVC.swift in Sources */,
 				A8471A41248D3B4A004A80BD /* RegisterVC.swift in Sources */,
 				A8471A45248D3FF4004A80BD /* BaseViewController.swift in Sources */,
+				A8BA44C724912D110003C109 /* AccountCell.swift in Sources */,
 				A8471A49248D50C4004A80BD /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

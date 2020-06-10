@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Bold.ttf">
+            <string>Quicksand-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="accountCell" rowHeight="76" id="KGk-i7-Jjw" customClass="AccountCell" customModule="FunnyQuiz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZq-Hz-F8d">
+                        <rect key="frame" x="8" y="8" width="304" height="60"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uVL-Y4-YDL">
+                                <rect key="frame" x="10" y="0.0" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="AHF-tu-rfH"/>
+                                    <constraint firstAttribute="height" constant="60" id="m4F-mJ-dtS"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lnu-6e-eux">
+                                <rect key="frame" x="82" y="19" width="210" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uVL-Y4-YDL" firstAttribute="leading" secondItem="ZZq-Hz-F8d" secondAttribute="leading" constant="10" id="SJh-kh-Sdr"/>
+                            <constraint firstItem="Lnu-6e-eux" firstAttribute="leading" secondItem="uVL-Y4-YDL" secondAttribute="trailing" constant="12" id="ZvO-Lz-DyB"/>
+                            <constraint firstItem="uVL-Y4-YDL" firstAttribute="centerY" secondItem="ZZq-Hz-F8d" secondAttribute="centerY" id="dAm-a2-KmM"/>
+                            <constraint firstAttribute="height" constant="60" id="ddJ-dy-wU2"/>
+                            <constraint firstItem="Lnu-6e-eux" firstAttribute="centerY" secondItem="uVL-Y4-YDL" secondAttribute="centerY" id="mVB-2g-ZQm"/>
+                            <constraint firstAttribute="trailing" secondItem="Lnu-6e-eux" secondAttribute="trailing" constant="12" id="vRZ-hG-fLT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="ZZq-Hz-F8d" secondAttribute="bottom" constant="8" id="5IY-WC-1x4"/>
+                    <constraint firstAttribute="trailing" secondItem="ZZq-Hz-F8d" secondAttribute="trailing" constant="8" id="Cfi-cu-ZZN"/>
+                    <constraint firstItem="ZZq-Hz-F8d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Gsl-jR-BR9"/>
+                    <constraint firstItem="ZZq-Hz-F8d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="lgd-Ls-ARt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgMenu" destination="uVL-Y4-YDL" id="eCR-WA-46c"/>
+                <outlet property="lbMenu" destination="Lnu-6e-eux" id="MJJ-Zv-ec2"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="164.73214285714286"/>
+        </tableViewCell>
+    </objects>
+</document>

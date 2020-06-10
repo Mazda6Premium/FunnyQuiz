@@ -21,6 +21,12 @@ class ViewController: BaseViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupUI()
+        fakeData()
+    }
+    
+    func fakeData() {
+        tfEmail.text = "nttrung254@gmail.com"
+        tfPassword.text = "123456"
     }
     
     func setupUI() {
