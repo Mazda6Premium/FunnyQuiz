@@ -44,15 +44,15 @@ class AccountVC: BaseViewController {
     
     var arrayMenu = [Menu]()
     
-    var arrayAdmin = [Menu(title: "Admin Dashboard", image: "admin"),
-                        Menu(title: "Achievement", image: "achievement"),
-                        Menu(title: "Rating FunnyQuiz", image: "rating"),
-                        Menu(title: "Feedback", image: "mail"),
-                        Menu(title: "Change password", image: "changepw"),
+    var arrayAdmin = [Menu(title: "Quiz", image: "admin"),
+                        Menu(title: "Pair", image: "achievement"),
+                        Menu(title: "User", image: "rating"),
+                        Menu(title: "Revenue", image: "mail"),
+                        Menu(title: "Rating", image: "changepw"),
                         Menu(title: "Log out", image: "logout")]
     
     var arrayUser = [Menu(title: "Achievement", image: "achievement"),
-                        Menu(title: "Rating FunnyQuiz", image: "rating"),
+                        Menu(title: "Rating", image: "rating"),
                         Menu(title: "Feedback", image: "mail"),
                         Menu(title: "Other app", image: "app"),
                         Menu(title: "Change password", image: "changepw"),
@@ -90,9 +90,73 @@ class AccountVC: BaseViewController {
             lbF.text = arrayMenu[5].title
             
         }
+        
+        let tapA = UITapGestureRecognizer(target: self, action: #selector(tapViewA))
+        viewA.addGestureRecognizer(tapA)
+        let tapB = UITapGestureRecognizer(target: self, action: #selector(tapViewB))
+        viewB.addGestureRecognizer(tapB)
+        let tapC = UITapGestureRecognizer(target: self, action: #selector(tapViewC))
+        viewC.addGestureRecognizer(tapC)
+        let tapD = UITapGestureRecognizer(target: self, action: #selector(tapViewD))
+        viewD.addGestureRecognizer(tapD)
+        let tapE = UITapGestureRecognizer(target: self, action: #selector(tapViewE))
+        viewE.addGestureRecognizer(tapE)
+        let tapF = UITapGestureRecognizer(target: self, action: #selector(tapViewF))
+        viewF.addGestureRecognizer(tapF)
     }
     
+    @objc func tapViewA() {
+        UIView.animate(withDuration: 0.3) {
+            self.viewA.alpha = 0.3
+            UIView.animate(withDuration: 0.3) {
+                self.viewA.alpha = 1
+            }
+        }
+    }
     
-
+    @objc func tapViewB() {
+        UIView.animate(withDuration: 0.3) {
+            self.viewB.alpha = 0.3
+            UIView.animate(withDuration: 0.3) {
+                self.viewB.alpha = 1
+            }
+        }
+    }
+    
+    @objc func tapViewC() {
+        UIView.animate(withDuration: 0.3) {
+            self.viewC.alpha = 0.3
+            UIView.animate(withDuration: 0.3) {
+                self.viewC.alpha = 1
+            }
+        }
+    }
+    
+    @objc func tapViewD() {
+        UIView.animate(withDuration: 0.3) {
+            self.viewD.alpha = 0.3
+            UIView.animate(withDuration: 0.3) {
+                self.viewD.alpha = 1
+            }
+        }
+    }
+    
+    @objc func tapViewE() {
+        UIView.animate(withDuration: 0.3) {
+            self.viewE.alpha = 0.3
+            UIView.animate(withDuration: 0.3) {
+                self.viewE.alpha = 1
+            }
+        }
+    }
+    
+    @objc func tapViewF() {
+        UIView.animate(withDuration: 0.3) {
+            self.viewF.alpha = 0.3
+            UIView.animate(withDuration: 0.3) {
+                self.viewF.alpha = 1
+            }
+        }
+    }
 }
 
