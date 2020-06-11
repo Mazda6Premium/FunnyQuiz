@@ -92,6 +92,19 @@ extension AccountVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
         
         return CGSize(width: size, height: size)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if admin {
+            switch indexPath.row {
+            case 0:
+                let vc = NewQuizVC(nibName: "NewQuizVC", bundle: nil)
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+            default:
+                break
+            }
+        }
+    }
 }
 
 

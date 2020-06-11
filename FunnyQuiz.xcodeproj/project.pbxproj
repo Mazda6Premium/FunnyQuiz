@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		465A285BE2C6E704112BA5FB /* Pods_FunnyQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8732FED21292212D8C709A2D /* Pods_FunnyQuiz.framework */; };
+		A806D4112492847C00534999 /* PlayingQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A806D40F2492847C00534999 /* PlayingQuizVC.swift */; };
+		A806D4122492847C00534999 /* PlayingQuizVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A806D4102492847C00534999 /* PlayingQuizVC.xib */; };
 		A83A80DD24926C7600D76D15 /* QuizColCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83A80DB24926C7600D76D15 /* QuizColCell.swift */; };
 		A83A80DE24926C7600D76D15 /* QuizColCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A83A80DC24926C7600D76D15 /* QuizColCell.xib */; };
 		A8471A1A248D2AC4004A80BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8471A19248D2AC4004A80BD /* AppDelegate.swift */; };
@@ -43,6 +45,8 @@
 		6C93E7E2137CD065510360AD /* Pods-FunnyQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunnyQuiz.release.xcconfig"; path = "Target Support Files/Pods-FunnyQuiz/Pods-FunnyQuiz.release.xcconfig"; sourceTree = "<group>"; };
 		8732FED21292212D8C709A2D /* Pods_FunnyQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunnyQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E8374FE6B4F3F09C774EDC8 /* Pods-FunnyQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunnyQuiz.debug.xcconfig"; path = "Target Support Files/Pods-FunnyQuiz/Pods-FunnyQuiz.debug.xcconfig"; sourceTree = "<group>"; };
+		A806D40F2492847C00534999 /* PlayingQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingQuizVC.swift; sourceTree = "<group>"; };
+		A806D4102492847C00534999 /* PlayingQuizVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayingQuizVC.xib; sourceTree = "<group>"; };
 		A83A80DB24926C7600D76D15 /* QuizColCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizColCell.swift; sourceTree = "<group>"; };
 		A83A80DC24926C7600D76D15 /* QuizColCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizColCell.xib; sourceTree = "<group>"; };
 		A8471A16248D2AC4004A80BD /* FunnyQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunnyQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -233,6 +237,8 @@
 			children = (
 				A83A80DF24926C7D00D76D15 /* CollectionCell */,
 				A8BA44BF249128340003C109 /* QuizVC.swift */,
+				A806D40F2492847C00534999 /* PlayingQuizVC.swift */,
+				A806D4102492847C00534999 /* PlayingQuizVC.xib */,
 			);
 			path = TabQuiz;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 				A8471A23248D2AC5004A80BD /* Assets.xcassets in Resources */,
 				A8471A21248D2AC4004A80BD /* Main.storyboard in Resources */,
 				A85DCE882491CB10006967A8 /* NewQuizVC.xib in Resources */,
+				A806D4122492847C00534999 /* PlayingQuizVC.xib in Resources */,
 				A8BA44C824912D110003C109 /* AccountCell.xib in Resources */,
 				A8471A42248D3B4A004A80BD /* RegisterVC.xib in Resources */,
 				A85DCE832491CAE2006967A8 /* QuizManagementVC.xib in Resources */,
@@ -423,6 +430,7 @@
 				A8471A1A248D2AC4004A80BD /* AppDelegate.swift in Sources */,
 				A85DCE8A24920D0B006967A8 /* Quiz.swift in Sources */,
 				A8471A1C248D2AC4004A80BD /* SceneDelegate.swift in Sources */,
+				A806D4112492847C00534999 /* PlayingQuizVC.swift in Sources */,
 				A83A80DD24926C7600D76D15 /* QuizColCell.swift in Sources */,
 				A8471A3B248D3939004A80BD /* Constant.swift in Sources */,
 				A8BA44C0249128340003C109 /* QuizVC.swift in Sources */,

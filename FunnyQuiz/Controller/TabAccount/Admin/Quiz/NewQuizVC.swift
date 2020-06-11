@@ -119,7 +119,7 @@ class NewQuizVC: BaseViewController {
                         self?.uploadImage(imgQuiz: self?.i4) { [weak self] (url4) in
                             let quiz = Quiz(category: self!.tfCategory.text!, question: self!.tfQuestion.text!, index: Int(self!.tfIndex.text!)!, answer: Int(self!.tfAnswer.text!)!, img1: url1, img2: url2, img3: url3, img4: url4)
                             let key = databaseReference.childByAutoId().key!
-                            databaseReference.child("Quiz").child(key).setValue(quiz.asDict())
+                            databaseReference.child("Quiz").child(self!.tfCategory.text!).child(key).setValue(quiz.asDict())
                             
                             self?.showToast(message: "Post successfully")
                             self?.stopAnimating()

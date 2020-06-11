@@ -69,4 +69,11 @@ extension QuizVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         let size = (view.frame.width - 30) / 2
         return CGSize(width: size, height: size)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = PlayingQuizVC(nibName: "PlayingQuizVC", bundle: nil)
+        vc.category = arrayQuizMenu[indexPath.row].title
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
