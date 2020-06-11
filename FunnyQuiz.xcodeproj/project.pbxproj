@@ -30,6 +30,7 @@
 		A85DCE832491CAE2006967A8 /* QuizManagementVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A85DCE812491CAE2006967A8 /* QuizManagementVC.xib */; };
 		A85DCE872491CB10006967A8 /* NewQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85DCE852491CB10006967A8 /* NewQuizVC.swift */; };
 		A85DCE882491CB10006967A8 /* NewQuizVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A85DCE862491CB10006967A8 /* NewQuizVC.xib */; };
+		A85DCE8A24920D0B006967A8 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85DCE8924920D0B006967A8 /* Quiz.swift */; };
 		A8BA44C0249128340003C109 /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BA44BF249128340003C109 /* QuizVC.swift */; };
 		A8BA44C32491296C0003C109 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BA44C22491296C0003C109 /* AccountVC.swift */; };
 		A8BA44C724912D110003C109 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BA44C524912D110003C109 /* AccountCell.swift */; };
@@ -64,6 +65,7 @@
 		A85DCE812491CAE2006967A8 /* QuizManagementVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizManagementVC.xib; sourceTree = "<group>"; };
 		A85DCE852491CB10006967A8 /* NewQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuizVC.swift; sourceTree = "<group>"; };
 		A85DCE862491CB10006967A8 /* NewQuizVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewQuizVC.xib; sourceTree = "<group>"; };
+		A85DCE8924920D0B006967A8 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Quiz.swift; path = FunnyQuiz/Controller/TabAccount/Admin/Quiz/Quiz.swift; sourceTree = SOURCE_ROOT; };
 		A8BA44BF249128340003C109 /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
 		A8BA44C22491296C0003C109 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 		A8BA44C524912D110003C109 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				A8471A4A248D542C004A80BD /* User.swift */,
+				A85DCE8924920D0B006967A8 /* Quiz.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 			files = (
 				A8471A1E248D2AC4004A80BD /* ViewController.swift in Sources */,
 				A8471A1A248D2AC4004A80BD /* AppDelegate.swift in Sources */,
+				A85DCE8A24920D0B006967A8 /* Quiz.swift in Sources */,
 				A8471A1C248D2AC4004A80BD /* SceneDelegate.swift in Sources */,
 				A8471A3B248D3939004A80BD /* Constant.swift in Sources */,
 				A8BA44C0249128340003C109 /* QuizVC.swift in Sources */,

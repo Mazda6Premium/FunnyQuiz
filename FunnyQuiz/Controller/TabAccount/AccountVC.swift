@@ -43,6 +43,7 @@ class AccountVC: BaseViewController {
     @IBOutlet weak var lbF: UILabel!
     
     var arrayMenu = [Menu]()
+    var admin = false
     
     var arrayAdmin = [Menu(title: "Quiz", image: "admin"),
                         Menu(title: "Pair", image: "achievement"),
@@ -71,8 +72,10 @@ class AccountVC: BaseViewController {
         if let currentUserId = Auth.auth().currentUser?.uid {
             if currentUserId == ADMIN_ID {
                 arrayMenu = arrayAdmin
+                admin = true
             } else {
                 arrayMenu = arrayUser
+                admin = false
             }
             
             imgA.image = UIImage(named: arrayMenu[0].image)
@@ -111,6 +114,14 @@ class AccountVC: BaseViewController {
             UIView.animate(withDuration: 0.3) {
                 self.viewA.alpha = 1
             }
+        }
+        
+        if admin {
+            let vc = NewQuizVC(nibName: "NewQuizVC", bundle: nil)
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            
         }
     }
     
