@@ -38,7 +38,7 @@ class NewQuizVC: BaseViewController {
     var i3: UIImage?
     var i4: UIImage?
     
-    var arrayCategory = ["Animal", "Job", "Sport", "Vehicle", "Weapon", "Camping", "Kid", "Scientis", "Cinema", "School", "Restaurant", "Social Media"]
+    var arrayCategory = ["Animal", "Job", "Sport", "Vehicle", "Weapon", "Camping", "Kid", "Science", "Cinema", "School", "Restaurant", "Social Media"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
