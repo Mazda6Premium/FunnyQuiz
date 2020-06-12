@@ -38,6 +38,8 @@ class NewQuizVC: BaseViewController {
     var i3: UIImage?
     var i4: UIImage?
     
+    var timer = Timer()
+    
     var arrayCategory = ["Animal", "Job", "Sport", "Vehicle", "Weapon", "Camping", "Kid", "Science", "Cinema", "School", "Restaurant", "Social Media"]
     
     override func viewDidLoad() {
@@ -125,7 +127,7 @@ class NewQuizVC: BaseViewController {
              
              self.showToast(message: "Post successfully")
              self.stopAnimating()
-             _ = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.clearData), userInfo: nil, repeats: true)
+             timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.clearData), userInfo: nil, repeats: true)
             
 //            uploadImage(imgQuiz: i1) { [weak self] (url1) in
 //                self?.uploadImage(imgQuiz: self?.i2) { [weak self] (url2) in
@@ -153,6 +155,8 @@ class NewQuizVC: BaseViewController {
         img2.image = UIImage(named: "ic_placeholder")
         img3.image = UIImage(named: "ic_placeholder")
         img4.image = UIImage(named: "ic_placeholder")
+        
+        timer.invalidate()
     }
     
     func uploadImage(imgQuiz: UIImage?, completion: ((_ url: String) -> Void)? = nil) {

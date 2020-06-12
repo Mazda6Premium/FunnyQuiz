@@ -15,8 +15,8 @@ target 'FunnyQuiz' do
   pod 'Firebase/Storage'
   pod 'Firebase/Messaging'
   pod 'SDWebImage'
-  pod 'SimpleImageViewer'
-  pod 'FSPagerView'
+#  pod 'SimpleImageViewer'
+#  pod 'FSPagerView'
   pod 'ActionSheetPicker-3.0'
   pod 'SwiftEntryKit'
 end

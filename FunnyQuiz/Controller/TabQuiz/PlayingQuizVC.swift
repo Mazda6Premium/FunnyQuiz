@@ -62,6 +62,7 @@ class PlayingQuizVC: BaseViewController {
     }
     
     func bindData(arrayQuiz: [Quiz]) {
+        startAnimating()
         let quiz = arrayQuiz[index]
         lbQuestion.text = quiz.question
         lbNumberQuestion.text = "\(index + 1)/\(arrayQuiz.count)"
@@ -86,6 +87,7 @@ class PlayingQuizVC: BaseViewController {
         viewD.backgroundColor = SUBMAIN_COLOR
         
         self.progressView.progress = Float(self.index + 1) / self.totalQuestion
+        stopAnimating()
 
     }
     

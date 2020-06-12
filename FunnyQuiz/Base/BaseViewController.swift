@@ -135,7 +135,7 @@ class BaseViewController: UIViewController {
         
         let titleStyle = EKProperty.LabelStyle(
             
-            font: UIFont(name: "Quicksand-Bold", size: 30)!,
+            font: UIFont(name: "Quicksand-Bold", size: 25)!,
             color: .init(SUBMAIN_COLOR),
             alignment: .center,
             displayMode: .light,
@@ -147,7 +147,7 @@ class BaseViewController: UIViewController {
         
         let descriptonStyle =  EKProperty.LabelStyle(
             
-            font: UIFont(name: "Quicksand-Bold", size: 18)!,
+            font: UIFont(name: "Quicksand-Bold", size: 16)!,
             color: .init(descriptionColor),
             alignment: .center,
             displayMode: .light,
@@ -173,8 +173,8 @@ class BaseViewController: UIViewController {
             imageName: imagePopUp,
             animation: .none,
             displayMode: .light,
-            size: CGSize(width: 75, height: 75),
-            contentMode: .scaleAspectFill,
+            size: CGSize(width: 80, height: 80),
+            contentMode: .scaleAspectFit,
             tint: .black,
             makesRound: true,
             accessibilityIdentifier: .none
@@ -195,7 +195,7 @@ class BaseViewController: UIViewController {
             if self.titlePopUp == "Congratulations!" {
                 SwiftEntryKit.dismiss()
                 self.navigationController?.popViewController(animated: true)
-            } else if self.titlePopUp == "Right answer !!!" {
+            } else if self.titlePopUp == "Correct answer !!!" {
                 self.nextQuestion?()
                 SwiftEntryKit.dismiss()
             } else {
@@ -210,7 +210,7 @@ class BaseViewController: UIViewController {
     func showCompletePopup(category: String)  {
         lblDescription = "You have completed all \(category) quiz"
         titlePopUp = "Congratulations!"
-        imagePopUp = "logo"
+        imagePopUp = "ic_complete"
         backgroundColor = MAIN_COLOR
         descriptionColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         nameButton = "Finish"
@@ -220,8 +220,8 @@ class BaseViewController: UIViewController {
     
     func showSuccessPopup(completion: (() -> Void)? = nil)  {
         lblDescription = "Congratulations! You choose right"
-        titlePopUp = "Right answer !!!"
-        imagePopUp = "logo"
+        titlePopUp = "Correct answer !!!"
+        imagePopUp = "ic_true"
         backgroundColor = MAIN_COLOR
         descriptionColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         nameButton = "Next question"
@@ -233,7 +233,7 @@ class BaseViewController: UIViewController {
     func showFailPopup() {
         lblDescription = "Keep fighting to get right answer"
         titlePopUp = "Wrong answer !!!"
-        imagePopUp = "logo"
+        imagePopUp = "ic_false"
         backgroundColor = MAIN_COLOR
         descriptionColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         nameButton = "Try again"
