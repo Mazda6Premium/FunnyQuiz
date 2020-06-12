@@ -18,4 +18,5 @@ target 'FunnyQuiz' do
   pod 'SimpleImageViewer'
   pod 'FSPagerView'
   pod 'ActionSheetPicker-3.0'
+  pod 'SwiftEntryKit'
 end

@@ -116,10 +116,13 @@ PODS:
   - NVActivityIndicatorView/Presenter (4.8.0)
   - PromisesObjC (1.2.8)
   - Protobuf (3.11.4)
+  - QuickLayout (3.0.0)
   - SDWebImage (5.7.0):
     - SDWebImage/Core (= 5.7.0)
   - SDWebImage/Core (5.7.0)
   - SimpleImageViewer (1.1.1)
+  - SwiftEntryKit (1.2.3):
+    - QuickLayout (= 3.0.0)
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
@@ -134,6 +137,7 @@ DEPENDENCIES:
   - NVActivityIndicatorView
   - SDWebImage
   - SimpleImageViewer
+  - SwiftEntryKit
   - Toast-Swift
 
 SPEC REPOS:
@@ -164,8 +168,10 @@ SPEC REPOS:
     - NVActivityIndicatorView
     - PromisesObjC
     - Protobuf
+    - QuickLayout
     - SDWebImage
     - SimpleImageViewer
+    - SwiftEntryKit
     - Toast-Swift
 
 SPEC CHECKSUMS:
@@ -195,10 +201,12 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
+  QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
   SDWebImage: a99471f452bdfa0ca52ddf5b1adf2b61cab1d1eb
   SimpleImageViewer: 34c3a2cde2d9ac022146772cefc27fca14b0c8b1
+  SwiftEntryKit: 340713c2e4a6662c5149629990bf1088bf5f0389
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 9811d2e475801670efb216661396363577404fca
+PODFILE CHECKSUM: 646f0f108940c1b5c87f2c8c1d3b550ff2b92005
 
 COCOAPODS: 1.6.1

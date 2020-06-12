@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "68D472905BA749B83B22712C30615339"
+               BlueprintIdentifier = "B4E66CD553155A4FF369633F862BC333"
                BuildableName = "Pods_FunnyQuiz.framework"
                BlueprintName = "Pods-FunnyQuiz"
                ReferencedContainer = "container:Pods.xcodeproj">
