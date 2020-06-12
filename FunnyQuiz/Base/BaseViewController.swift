@@ -10,12 +10,24 @@ import UIKit
 import Foundation
 import NVActivityIndicatorView
 import Toast_Swift
+import SwiftEntryKit
+
+
 
 class BaseViewController: UIViewController {
     
     let viewIndicator = UIView()
     var loadingIndicator: NVActivityIndicatorView?
     
+    var lblDescription = ""
+    var titlePopUp = ""
+    var imagePopUp = ""
+    var nameButton = ""
+    var backgroundColor : UIColor!
+    var descriptionColor : UIColor!
+    
+    var nextQuestion: (() -> Void)?
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -102,6 +114,133 @@ class BaseViewController: UIViewController {
         }
     }
     
+    func setUpPopView() {
+        var attributes = EKAttributes.bottomFloat
+        attributes.border = .value(color: .brown, width: 1)
+        attributes.roundCorners = .all(radius: 25)
+        attributes.displayDuration = .infinity
+        attributes.displayMode = .dark
+        attributes.entryBackground = .color(color: .init(backgroundColor))
+        attributes.screenBackground = .visualEffect(style: .init(light: .extraLight, dark: .dark))
+        attributes.position = .bottom
+        attributes.entryInteraction = .absorbTouches
+        attributes.scroll = .disabled
+        attributes.entranceAnimation = .init(translate: .init(duration: 0.24), scale: .none, fade: .none)
+        attributes.exitAnimation = .init(translate: .init(duration: 0.24), scale: .none, fade: .none)
+        attributes.shadow = .active(with: .init(color: .init(.darkGray), opacity: 0.5, radius: 10, offset: CGSize(width: 2, height: 2)))
+        
+        let widthConstraint = EKAttributes.PositionConstraints.Edge.ratio(value: 0.8)
+        let heightConstraint = EKAttributes.PositionConstraints.Edge.offset(value: 20)
+        attributes.positionConstraints.maxSize  = .init(width: widthConstraint, height: heightConstraint)
+        
+        let titleStyle = EKProperty.LabelStyle(
+            
+            font: UIFont(name: "Quicksand-Bold", size: 30)!,
+            color: .init(SUBMAIN_COLOR),
+            alignment: .center,
+            displayMode: .light,
+            numberOfLines: 1
+            
+        )
+        
+        let title = EKProperty.LabelContent(text: titlePopUp, style: titleStyle)
+        
+        let descriptonStyle =  EKProperty.LabelStyle(
+            
+            font: UIFont(name: "Quicksand-Bold", size: 18)!,
+            color: .init(descriptionColor),
+            alignment: .center,
+            displayMode: .light,
+            numberOfLines: 2
+            
+        )
+        
+        let description = EKProperty.LabelContent(text: lblDescription, style: descriptonStyle)
+        
+        let titleButton = EKProperty.LabelContent(
+            
+            text: nameButton,
+            style: .init(font: UIFont(name: "Quicksand-Bold", size: 16)!,
+                         color: .white,
+                         alignment: .center,
+                         displayMode: .light,
+                         numberOfLines: 1)
+            
+        )
+        
+        let image = EKProperty.ImageContent(
+            
+            imageName: imagePopUp,
+            animation: .none,
+            displayMode: .light,
+            size: CGSize(width: 75, height: 75),
+            contentMode: .scaleAspectFill,
+            tint: .black,
+            makesRound: true,
+            accessibilityIdentifier: .none
+            
+        )
+        
+        let themeImage = EKPopUpMessage.ThemeImage(image: image, position: .topToTop(offset: 30))
+        
+        let button = EKProperty.ButtonContent(
+            
+            label: titleButton,
+            backgroundColor: .init(#colorLiteral(red: 0.3450980392, green: 0.337254902, blue: 0.8392156863, alpha: 1)),
+            highlightedBackgroundColor: .clear
+            
+        )
+        
+        let popUpMessage = EKPopUpMessage(themeImage: themeImage, title: title, description: description, button: button) {
+            if self.titlePopUp == "Congratulations!" {
+                SwiftEntryKit.dismiss()
+                self.navigationController?.popViewController(animated: true)
+            } else if self.titlePopUp == "Right answer !!!" {
+                self.nextQuestion?()
+                SwiftEntryKit.dismiss()
+            } else {
+                SwiftEntryKit.dismiss()
+            }
+        }
+        
+        let popUpView = EKPopUpMessageView(with: popUpMessage)
+        SwiftEntryKit.display(entry: popUpView, using: attributes)
+    }
+    
+    func showCompletePopup(category: String)  {
+        lblDescription = "You have completed all \(category) quiz"
+        titlePopUp = "Congratulations!"
+        imagePopUp = "logo"
+        backgroundColor = MAIN_COLOR
+        descriptionColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        nameButton = "Finish"
+        
+        setUpPopView()
+    }
+    
+    func showSuccessPopup(completion: (() -> Void)? = nil)  {
+        lblDescription = "Congratulations! You choose right"
+        titlePopUp = "Right answer !!!"
+        imagePopUp = "logo"
+        backgroundColor = MAIN_COLOR
+        descriptionColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        nameButton = "Next question"
+        
+        setUpPopView()
+        completion?()
+    }
+    
+    func showFailPopup() {
+        lblDescription = "Keep fighting to get right answer"
+        titlePopUp = "Wrong answer !!!"
+        imagePopUp = "logo"
+        backgroundColor = MAIN_COLOR
+        descriptionColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        nameButton = "Try again"
+        
+        setUpPopView()
+    }
+        
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
         let touch: UITouch? = touches.first

@@ -48,6 +48,11 @@ class NewQuizVC: BaseViewController {
         setupUI()
     }
     
+    func randomAnswer() {
+        let randomNum = Int.random(in: 1..<5)
+        tfAnswer.text = "\(randomNum)"
+    }
+    
     func setupUI() {
         roundCorner(views: [view1, view2, view3, view4], radius: CORNER_VIEW)
         roundCorner(views: [btPost], radius: CORNER_BUTTON)
@@ -109,25 +114,28 @@ class NewQuizVC: BaseViewController {
     @IBAction func tapOnPost(_ sender: Any) {
         self.view.endEditing(true)
         startAnimating()
-        if tfCategory.text == "" || tfQuestion.text == "" || tfIndex.text == "" || tfAnswer.text == "" || i1 == nil || i2 == nil || i3 == nil || i4 == nil {
+        randomAnswer()
+        if tfCategory.text == "" || tfQuestion.text == "" || tfIndex.text == "" || tfAnswer.text == "" {
             showToast(message: "Please enter all information")
             stopAnimating()
         } else {
-            uploadImage(imgQuiz: i1) { [weak self] (url1) in
-                self?.uploadImage(imgQuiz: self?.i2) { [weak self] (url2) in
-                    self?.uploadImage(imgQuiz: self?.i3) { [weak self] (url3) in
-                        self?.uploadImage(imgQuiz: self?.i4) { [weak self] (url4) in
-                            let quiz = Quiz(category: self!.tfCategory.text!, question: self!.tfQuestion.text!, index: Int(self!.tfIndex.text!)!, answer: Int(self!.tfAnswer.text!)!, img1: url1, img2: url2, img3: url3, img4: url4)
-                            let key = databaseReference.childByAutoId().key!
-                            databaseReference.child("Quiz").child(self!.tfCategory.text!).child(key).setValue(quiz.asDict())
-                            
-                            self?.showToast(message: "Post successfully")
-                            self?.stopAnimating()
-                            _ = Timer.scheduledTimer(timeInterval: 3, target: self!, selector: #selector(self?.clearData), userInfo: nil, repeats: true)
-                        }
-                    }
-                }
-            }
+            let quiz = Quiz(category: self.tfCategory.text!, question: self.tfQuestion.text!, index: Int(self.tfIndex.text!)!, answer: Int(self.tfAnswer.text!)!, img1: "", img2: "", img3: "", img4: "")
+             let key = databaseReference.childByAutoId().key!
+             databaseReference.child("Quiz").child(self.tfCategory.text!).child(key).setValue(quiz.asDict())
+             
+             self.showToast(message: "Post successfully")
+             self.stopAnimating()
+             _ = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.clearData), userInfo: nil, repeats: true)
+            
+//            uploadImage(imgQuiz: i1) { [weak self] (url1) in
+//                self?.uploadImage(imgQuiz: self?.i2) { [weak self] (url2) in
+//                    self?.uploadImage(imgQuiz: self?.i3) { [weak self] (url3) in
+//                        self?.uploadImage(imgQuiz: self?.i4) { [weak self] (url4) in
+//
+//                        }
+//                    }
+//                }
+//            }
         }
     }
     
