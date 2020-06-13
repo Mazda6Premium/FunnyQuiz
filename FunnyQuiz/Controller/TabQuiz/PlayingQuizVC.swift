@@ -81,10 +81,7 @@ class PlayingQuizVC: BaseViewController {
                 
         btCheck.alpha = 0.6
         btCheck.isUserInteractionEnabled = false
-        viewA.backgroundColor = SUBMAIN_COLOR
-        viewB.backgroundColor = SUBMAIN_COLOR
-        viewC.backgroundColor = SUBMAIN_COLOR
-        viewD.backgroundColor = SUBMAIN_COLOR
+        addBorder(views: [viewA, viewB, viewC, viewD], width: 0, color: UIColor.clear.cgColor)
         
         self.progressView.progress = Float(self.index + 1) / self.totalQuestion
         stopAnimating()
@@ -95,6 +92,8 @@ class PlayingQuizVC: BaseViewController {
         roundCorner(views: [viewA, viewB, viewC, viewD], radius: CORNER_VIEW)
         roundCorner(views: [viewQuestion], radius: 70)
         roundCorner(views: [btCheck], radius: CORNER_BUTTON)
+//        addBorder(views: [viewQuestion], width: 2, color: UIColor.white.cgColor)
+        
         btCheck.alpha = 0.6
         btCheck.isUserInteractionEnabled = false
         checkScreenType()
@@ -158,10 +157,16 @@ class PlayingQuizVC: BaseViewController {
     func setColor(chooseView: UIView, otherViews: [UIView]) {
         btCheck.alpha = 1
         btCheck.isUserInteractionEnabled = true
-        chooseView.backgroundColor = CHOOSE_COLOR
-        otherViews.forEach { (otherView) in
-            otherView.backgroundColor = SUBMAIN_COLOR
+        UIView.animate(withDuration: 0.3) {
+            chooseView.alpha = 0.5
+            UIView.animate(withDuration: 0.6) {
+                chooseView.alpha = 1
+                self.addBorder(views: [chooseView], width: 2, color: UIColor.white.cgColor)
+            }
         }
+        
+        addBorder(views: otherViews, width: 0, color: UIColor.clear.cgColor)
+        
         
         let bottomOffset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.size.height)
         scrollView.setContentOffset(bottomOffset, animated: true)

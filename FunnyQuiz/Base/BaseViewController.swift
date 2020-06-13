@@ -135,7 +135,7 @@ class BaseViewController: UIViewController {
         
         let titleStyle = EKProperty.LabelStyle(
             
-            font: UIFont(name: "Quicksand-Bold", size: 25)!,
+            font: UIFont(name: "Quicksand-Bold", size: 24)!,
             color: .init(SUBMAIN_COLOR),
             alignment: .center,
             displayMode: .light,
@@ -195,7 +195,7 @@ class BaseViewController: UIViewController {
             if self.titlePopUp == "Congratulations!" {
                 SwiftEntryKit.dismiss()
                 self.navigationController?.popViewController(animated: true)
-            } else if self.titlePopUp == "Correct answer !!!" {
+            } else if self.titlePopUp == "Correct answer!" {
                 self.nextQuestion?()
                 SwiftEntryKit.dismiss()
             } else {
@@ -219,8 +219,8 @@ class BaseViewController: UIViewController {
     }
     
     func showSuccessPopup(completion: (() -> Void)? = nil)  {
-        lblDescription = "Congratulations! You choose right"
-        titlePopUp = "Correct answer !!!"
+        lblDescription = "Excellent! You choose right"
+        titlePopUp = "Correct answer!"
         imagePopUp = "ic_true"
         backgroundColor = MAIN_COLOR
         descriptionColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
@@ -232,7 +232,7 @@ class BaseViewController: UIViewController {
     
     func showFailPopup() {
         lblDescription = "Keep fighting to get right answer"
-        titlePopUp = "Wrong answer !!!"
+        titlePopUp = "Wrong answer!"
         imagePopUp = "ic_false"
         backgroundColor = MAIN_COLOR
         descriptionColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
