@@ -53,3 +53,4 @@ class Quiz {
         self.img4 = fromDict["img4"] as? String ?? ""
     }
 }
+

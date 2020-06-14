@@ -47,6 +47,8 @@
 		A8B3BE362496120C00DA5905 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3BE352496120C00DA5905 /* Achievement.swift */; };
 		A8B3BE39249667EB00DA5905 /* RevenueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3BE37249667EB00DA5905 /* RevenueVC.swift */; };
 		A8B3BE3A249667EB00DA5905 /* RevenueVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B3BE38249667EB00DA5905 /* RevenueVC.xib */; };
+		A8B3BE3C2496838F00DA5905 /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3BE3B2496838F00DA5905 /* RandomNumber.swift */; };
+		A8B3BE402496937000DA5905 /* AnimalQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3BE3F2496937000DA5905 /* AnimalQuiz.swift */; };
 		A8BA44C0249128340003C109 /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BA44BF249128340003C109 /* QuizVC.swift */; };
 		A8BA44C32491296C0003C109 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BA44C22491296C0003C109 /* AccountVC.swift */; };
 /* End PBXBuildFile section */
@@ -96,6 +98,8 @@
 		A8B3BE352496120C00DA5905 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Achievement.swift; path = FunnyQuiz/Controller/TabAccount/User/Achievement/Achievement.swift; sourceTree = SOURCE_ROOT; };
 		A8B3BE37249667EB00DA5905 /* RevenueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueVC.swift; sourceTree = "<group>"; };
 		A8B3BE38249667EB00DA5905 /* RevenueVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RevenueVC.xib; sourceTree = "<group>"; };
+		A8B3BE3B2496838F00DA5905 /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
+		A8B3BE3F2496937000DA5905 /* AnimalQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnimalQuiz.swift; path = FunnyQuiz/Base/AnimalQuiz.swift; sourceTree = SOURCE_ROOT; };
 		A8BA44BF249128340003C109 /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
 		A8BA44C22491296C0003C109 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -229,6 +233,7 @@
 				A8471A4A248D542C004A80BD /* User.swift */,
 				A85DCE8924920D0B006967A8 /* Quiz.swift */,
 				A8B3BE352496120C00DA5905 /* Achievement.swift */,
+				A8B3BE3F2496937000DA5905 /* AnimalQuiz.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 				A8471A44248D3FF4004A80BD /* BaseViewController.swift */,
 				A8471A48248D50C4004A80BD /* Extensions.swift */,
 				A8253B422495382C00310EC0 /* SessionData.swift */,
+				A8B3BE3B2496838F00DA5905 /* RandomNumber.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -506,6 +512,7 @@
 				A85DCE8A24920D0B006967A8 /* Quiz.swift in Sources */,
 				A8471A1C248D2AC4004A80BD /* SceneDelegate.swift in Sources */,
 				A8B3BE362496120C00DA5905 /* Achievement.swift in Sources */,
+				A8B3BE402496937000DA5905 /* AnimalQuiz.swift in Sources */,
 				A806D4112492847C00534999 /* PlayingQuizVC.swift in Sources */,
 				A8253B432495382C00310EC0 /* SessionData.swift in Sources */,
 				A83A80DD24926C7600D76D15 /* QuizColCell.swift in Sources */,
@@ -516,6 +523,7 @@
 				A8471A41248D3B4A004A80BD /* RegisterVC.swift in Sources */,
 				A8253B3524951C3D00310EC0 /* ListUserVC.swift in Sources */,
 				A8B3BE33249610A500DA5905 /* AchievementVC.swift in Sources */,
+				A8B3BE3C2496838F00DA5905 /* RandomNumber.swift in Sources */,
 				A85DCE822491CAE2006967A8 /* QuizManagementVC.swift in Sources */,
 				A8471A45248D3FF4004A80BD /* BaseViewController.swift in Sources */,
 				A8253B3A24951CE200310EC0 /* UserCell.swift in Sources */,
