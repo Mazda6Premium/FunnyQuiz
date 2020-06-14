@@ -45,6 +45,8 @@
 		A8B3BE33249610A500DA5905 /* AchievementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3BE31249610A500DA5905 /* AchievementVC.swift */; };
 		A8B3BE34249610A500DA5905 /* AchievementVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B3BE32249610A500DA5905 /* AchievementVC.xib */; };
 		A8B3BE362496120C00DA5905 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3BE352496120C00DA5905 /* Achievement.swift */; };
+		A8B3BE39249667EB00DA5905 /* RevenueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3BE37249667EB00DA5905 /* RevenueVC.swift */; };
+		A8B3BE3A249667EB00DA5905 /* RevenueVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B3BE38249667EB00DA5905 /* RevenueVC.xib */; };
 		A8BA44C0249128340003C109 /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BA44BF249128340003C109 /* QuizVC.swift */; };
 		A8BA44C32491296C0003C109 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BA44C22491296C0003C109 /* AccountVC.swift */; };
 /* End PBXBuildFile section */
@@ -92,6 +94,8 @@
 		A8B3BE31249610A500DA5905 /* AchievementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementVC.swift; sourceTree = "<group>"; };
 		A8B3BE32249610A500DA5905 /* AchievementVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementVC.xib; sourceTree = "<group>"; };
 		A8B3BE352496120C00DA5905 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Achievement.swift; path = FunnyQuiz/Controller/TabAccount/User/Achievement/Achievement.swift; sourceTree = SOURCE_ROOT; };
+		A8B3BE37249667EB00DA5905 /* RevenueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueVC.swift; sourceTree = "<group>"; };
+		A8B3BE38249667EB00DA5905 /* RevenueVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RevenueVC.xib; sourceTree = "<group>"; };
 		A8BA44BF249128340003C109 /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
 		A8BA44C22491296C0003C109 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +134,8 @@
 		A8253B3224951C2000310EC0 /* Revenue */ = {
 			isa = PBXGroup;
 			children = (
+				A8B3BE37249667EB00DA5905 /* RevenueVC.swift */,
+				A8B3BE38249667EB00DA5905 /* RevenueVC.xib */,
 			);
 			path = Revenue;
 			sourceTree = "<group>";
@@ -395,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8471A4D248D55A0004A80BD /* Tabbar.storyboard in Resources */,
+				A8B3BE3A249667EB00DA5905 /* RevenueVC.xib in Resources */,
 				A8471A26248D2AC5004A80BD /* LaunchScreen.storyboard in Resources */,
 				A8471A34248D2C8A004A80BD /* Quicksand-Regular.ttf in Resources */,
 				A8253B412495339500310EC0 /* ChangePasswordVC.xib in Resources */,
@@ -514,6 +521,7 @@
 				A8253B3A24951CE200310EC0 /* UserCell.swift in Sources */,
 				A85DCE872491CB10006967A8 /* NewQuizVC.swift in Sources */,
 				A8471A49248D50C4004A80BD /* Extensions.swift in Sources */,
+				A8B3BE39249667EB00DA5905 /* RevenueVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

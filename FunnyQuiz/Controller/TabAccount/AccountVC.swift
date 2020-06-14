@@ -112,6 +112,10 @@ extension AccountVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
                 let vc = ListUserVC(nibName: "ListUserVC", bundle: nil)
                 vc.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(vc, animated: true)
+            case 3:
+                let vc = RevenueVC(nibName: "RevenueVC", bundle: nil)
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
             case 4: // rating
                 DispatchQueue.global(qos: .background).async {
                     DispatchQueue.main.async {
@@ -136,7 +140,10 @@ extension AccountVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
         } else {
             switch indexPath.row {
             case 0: // achievement
-                break
+                let vc = AchievementVC(nibName: "AchievementVC", bundle: nil)
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+                
             case 1: // rating
                 DispatchQueue.global(qos: .background).async {
                     DispatchQueue.main.async {
@@ -164,7 +171,7 @@ extension AccountVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
                 vc.modalPresentationStyle = .overCurrentContext
                 vc.delegate = self
                 self.navigationController?.tabBarController?.tabBar.isHidden = true
-                self.navigationController?.present(vc, animated: true, completion: nil)
+                self.present(vc, animated: true, completion: nil)
             case 5: //
                 try? Auth.auth().signOut()
                 SessionData.shared.userData = nil

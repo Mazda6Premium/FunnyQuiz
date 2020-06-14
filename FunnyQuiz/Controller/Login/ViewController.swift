@@ -26,8 +26,8 @@ class ViewController: BaseViewController {
     }
     
     func fakeData() {
-        tfEmail.text = "nttrung25491@gmail.com"
-        tfPassword.text = "654321"
+        tfEmail.text = "nttrung254@gmail.com"
+        tfPassword.text = "123456"
     }
     
     func setupUI() {

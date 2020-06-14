@@ -215,6 +215,13 @@ class BaseViewController: UIViewController {
         descriptionColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         nameButton = "Finish"
         
+        // POST ACHIEVEMENT TO FIREBASE DATABASE
+        if let id = SessionData.shared.userData?.id {
+            let achievement = Achievement(achievement: "Finish \(category) Quiz")
+            databaseReference.child("Achievement").child(id).child(category).setValue(achievement.asDict())
+
+        }
+        
         setUpPopView()
     }
     

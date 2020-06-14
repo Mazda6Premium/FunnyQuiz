@@ -101,7 +101,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="tapOnRegister:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Bq-SR-KWE"/>
+                                    <action selector="tapOnRegister:" destination="BYZ-38-t0r" eventType="touchUpInside" id="45B-cS-3Kr"/>
                                 </connections>
                             </button>
                         </subviews>
