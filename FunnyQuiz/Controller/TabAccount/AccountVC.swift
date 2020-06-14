@@ -49,6 +49,11 @@ class AccountVC: BaseViewController {
         setupCollectionView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.tabBarController?.tabBar.isHidden = false
+    }
+    
     func setupUI() {
         
         // CHECK ID LOGIN
@@ -152,11 +157,13 @@ extension AccountVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
                     }
                 }
             case 3: // other app
-                break
+                showToast(message: "Coming soon!")
             case 4: // change password
                 let vc = ChangePasswordVC(nibName: "ChangePasswordVC", bundle: nil)
                 vc.modalTransitionStyle = .crossDissolve
                 vc.modalPresentationStyle = .overCurrentContext
+                vc.delegate = self
+                self.navigationController?.tabBarController?.tabBar.isHidden = true
                 self.navigationController?.present(vc, animated: true, completion: nil)
             case 5: //
                 try? Auth.auth().signOut()
@@ -173,4 +180,9 @@ extension AccountVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
     }
 }
 
-
+extension AccountVC : ChangePasswordVCDelegate {
+    func dismissView() {
+        self.navigationController?.tabBarController?.tabBar.isHidden = false
+    }
+    
+}

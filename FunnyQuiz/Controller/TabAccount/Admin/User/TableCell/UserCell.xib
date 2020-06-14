@@ -25,7 +25,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n57-Hl-zda">
                         <rect key="frame" x="10" y="10" width="308" height="60"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="97m-X4-j7W">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="97m-X4-j7W">
                                 <rect key="frame" x="10" y="5" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="VRj-fi-dqv"/>
@@ -60,13 +60,11 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="imgUser" destination="97m-X4-j7W" id="aVT-ef-RPC"/>
                 <outlet property="lbUsername" destination="CZc-bF-1AV" id="gk1-kq-jYM"/>
                 <outlet property="viewCell" destination="n57-Hl-zda" id="1RV-eK-Ynu"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="163.39285714285714"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="logo" width="1022" height="799"/>
-    </resources>
 </document>

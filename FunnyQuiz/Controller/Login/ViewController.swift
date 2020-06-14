@@ -15,6 +15,7 @@ class ViewController: BaseViewController {
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var btLogin: UIButton!
+    @IBOutlet weak var btRegister: UIButton!
     
 
     override func viewDidLoad() {
@@ -25,12 +26,12 @@ class ViewController: BaseViewController {
     }
     
     func fakeData() {
-        tfEmail.text = "nttrung254@gmail.com"
-        tfPassword.text = "123456"
+        tfEmail.text = "nttrung25491@gmail.com"
+        tfPassword.text = "654321"
     }
     
     func setupUI() {
-        roundCorner(views: [btLogin], radius: CORNER_BUTTON)
+        roundCorner(views: [btLogin, btRegister], radius: CORNER_BUTTON)
     }
     
     override func viewWillAppear(_ animated: Bool) {

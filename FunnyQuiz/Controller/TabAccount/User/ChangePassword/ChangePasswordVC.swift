@@ -9,6 +9,10 @@
 import UIKit
 import Firebase
 
+protocol ChangePasswordVCDelegate {
+    func dismissView()
+}
+
 class ChangePasswordVC: BaseViewController {
     
     @IBOutlet weak var viewPopup: UIView!
@@ -16,6 +20,9 @@ class ChangePasswordVC: BaseViewController {
     @IBOutlet weak var tfNewPassword: UITextField!
     @IBOutlet weak var tfConfirmNewPassword: UITextField!
     @IBOutlet weak var btConfirm: UIButton!
+    @IBOutlet weak var btCancel: UIButton!
+    
+    var delegate : ChangePasswordVCDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +36,7 @@ class ChangePasswordVC: BaseViewController {
         view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         
         roundCorner(views: [viewPopup], radius: CORNER_VIEW)
-        roundCorner(views: [btConfirm], radius: CORNER_BUTTON)
+        roundCorner(views: [btConfirm, btCancel], radius: CORNER_BUTTON)
     }
     
     @IBAction func tapOnConfirm(_ sender: Any) {
@@ -44,26 +51,33 @@ class ChangePasswordVC: BaseViewController {
                     if tfNewPassword.text! == tfConfirmNewPassword.text! {
                         currentUser.updatePassword(to: tfNewPassword.text!) { (error) in
                             if error != nil {
-                                self.showToast(message: "Something went wrong, please try again later")
+                                self.showToast(message: error!.localizedDescription)
                                 self.stopAnimating()
                             } else {
-                                self.dismiss(animated: true) {
-                                    databaseReference.child("Users").child(userData.id).updateChildValues(["password": self.tfNewPassword.text!])
-                                    
-                                    self.showToast(message: "Change password successfully")
-                                    self.stopAnimating()
+                                databaseReference.child("Users").child(userData.id).updateChildValues(["password": self.tfNewPassword.text!])
+                                
+                                self.showToast(message: "Change password successfully")
+                                self.stopAnimating()
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                                    self.delegate?.dismissView()
+                                    self.dismiss(animated: true, completion: nil)
                                 }
                             }
                         }
                     } else {
-                        showToast(message: "Confirm new password is not match")
+                        self.showToast(message: "Confirm new password is not match")
                         stopAnimating()
                     }
                 } else {
-                    showToast(message: "Your old password is incorrect")
+                    self.showToast(message: "Your old password is incorrect")
                     stopAnimating()
                 }
             }
         }
+    }
+    
+    @IBAction func tapOnCancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        self.delegate?.dismissView()
     }
 }

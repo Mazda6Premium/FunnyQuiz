@@ -56,7 +56,9 @@ extension ListUserVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as! UserCell
-        cell.lbUsername.text = arrayUser[indexPath.row].email
+        let user = arrayUser[indexPath.row]
+        cell.lbUsername.text = user.email
+        cell.imgUser.image = UIImage(named: "logo")
         return cell
     }
     

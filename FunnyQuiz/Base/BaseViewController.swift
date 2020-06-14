@@ -97,12 +97,12 @@ class BaseViewController: UIViewController {
         }
     }
     
-    func showToast(message: String, duration: Double = 3) {
+    func showToast(message: String, duration: Double = 3, position: ToastPosition = ToastPosition.bottom) {
         var style = ToastStyle()
         style.backgroundColor = #colorLiteral(red: 0.3450980392, green: 0.337254902, blue: 0.8392156863, alpha: 1)
         style.messageColor = .white
         style.messageFont = UIFont.boldSystemFont(ofSize: 16)
-        self.view.makeToast(message, duration: duration, position: .bottom, style: style)
+        self.view.makeToast(message, duration: duration, position: position, style: style)
     }
     
     func addShadow(views: [UIView]) {
