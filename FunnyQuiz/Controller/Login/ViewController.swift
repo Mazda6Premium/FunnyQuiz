@@ -49,11 +49,22 @@ class ViewController: BaseViewController {
                     self.showToast(message: error!.localizedDescription)
                     self.stopAnimating()
                 } else {
-                    let vc = UIStoryboard(name: "Tabbar", bundle: nil).instantiateViewController(withIdentifier: "tabbarVC")
-                    vc.modalTransitionStyle = .crossDissolve
-                    vc.modalPresentationStyle = .overFullScreen
-                    self.present(vc, animated: true, completion: nil)
-                    self.stopAnimating()
+                    // SAVE TO SESSION DATA
+                    if let userId = authData?.user.uid {
+                        databaseReference.child("Users").child(userId).observe(.value) { (snapshot) in
+                            if let dict = snapshot.value as? [String: Any] {
+                                let user = User(dict: dict)
+                                SessionData.shared.userData = user
+                                
+                                let vc = UIStoryboard(name: "Tabbar", bundle: nil).instantiateViewController(withIdentifier: "tabbarVC")
+                                vc.modalTransitionStyle = .crossDissolve
+                                vc.modalPresentationStyle = .overFullScreen
+                                self.present(vc, animated: true, completion: nil)
+                                
+                                self.stopAnimating()
+                            }
+                        }
+                    }
                 }
             }
         }

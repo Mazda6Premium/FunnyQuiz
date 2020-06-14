@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import StoreKit
 
 struct Menu {
     var title = ""
@@ -100,6 +101,71 @@ extension AccountVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
                 let vc = NewQuizVC(nibName: "NewQuizVC", bundle: nil)
                 vc.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(vc, animated: true)
+            case 1:
+                showToast(message: "Coming soon!")
+            case 2:
+                let vc = ListUserVC(nibName: "ListUserVC", bundle: nil)
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+            case 4: // rating
+                DispatchQueue.global(qos: .background).async {
+                    DispatchQueue.main.async {
+                        self.startAnimating()
+                    }
+                    SKStoreReviewController.requestReview()
+                    DispatchQueue.main.async {
+                        self.stopAnimating()
+                    }
+                }
+            case 5: //
+                try? Auth.auth().signOut()
+                SessionData.shared.userData = nil
+                
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginVC")
+                vc.modalPresentationStyle = .overFullScreen
+                vc.modalTransitionStyle = .crossDissolve
+                self.present(vc, animated: true, completion: nil)
+            default:
+                break
+            }
+        } else {
+            switch indexPath.row {
+            case 0: // achievement
+                break
+            case 1: // rating
+                DispatchQueue.global(qos: .background).async {
+                    DispatchQueue.main.async {
+                        self.startAnimating()
+                    }
+                    SKStoreReviewController.requestReview()
+                    DispatchQueue.main.async {
+                        self.stopAnimating()
+                    }
+                }
+            case 2: // feedback
+                let email = "nttrung254@gmail.com"
+                if let url = URL(string: "mailto:\(email)") {
+                    if #available(iOS 10.0, *) {
+                        UIApplication.shared.open(url)
+                    } else {
+                        UIApplication.shared.openURL(url)
+                    }
+                }
+            case 3: // other app
+                break
+            case 4: // change password
+                let vc = ChangePasswordVC(nibName: "ChangePasswordVC", bundle: nil)
+                vc.modalTransitionStyle = .crossDissolve
+                vc.modalPresentationStyle = .overCurrentContext
+                self.navigationController?.present(vc, animated: true, completion: nil)
+            case 5: //
+                try? Auth.auth().signOut()
+                SessionData.shared.userData = nil
+                
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginVC")
+                vc.modalPresentationStyle = .overFullScreen
+                vc.modalTransitionStyle = .crossDissolve
+                self.present(vc, animated: true, completion: nil)
             default:
                 break
             }

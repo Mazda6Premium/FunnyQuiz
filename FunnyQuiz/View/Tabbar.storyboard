@@ -59,7 +59,7 @@
         <!--Quiz-->
         <scene sceneID="xRN-e2-UUL">
             <objects>
-                <viewController id="otG-S2-WBc" customClass="QuizVC" customModule="FunnyQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="quizVC" id="otG-S2-WBc" customClass="QuizVC" customModule="FunnyQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cIQ-uw-t3c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

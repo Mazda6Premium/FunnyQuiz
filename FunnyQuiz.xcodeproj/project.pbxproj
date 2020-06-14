@@ -10,6 +10,13 @@
 		465A285BE2C6E704112BA5FB /* Pods_FunnyQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8732FED21292212D8C709A2D /* Pods_FunnyQuiz.framework */; };
 		A806D4112492847C00534999 /* PlayingQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A806D40F2492847C00534999 /* PlayingQuizVC.swift */; };
 		A806D4122492847C00534999 /* PlayingQuizVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A806D4102492847C00534999 /* PlayingQuizVC.xib */; };
+		A8253B3524951C3D00310EC0 /* ListUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8253B3324951C3D00310EC0 /* ListUserVC.swift */; };
+		A8253B3624951C3D00310EC0 /* ListUserVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8253B3424951C3D00310EC0 /* ListUserVC.xib */; };
+		A8253B3A24951CE200310EC0 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8253B3824951CE200310EC0 /* UserCell.swift */; };
+		A8253B3B24951CE200310EC0 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8253B3924951CE200310EC0 /* UserCell.xib */; };
+		A8253B402495339500310EC0 /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8253B3E2495339500310EC0 /* ChangePasswordVC.swift */; };
+		A8253B412495339500310EC0 /* ChangePasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8253B3F2495339500310EC0 /* ChangePasswordVC.xib */; };
+		A8253B432495382C00310EC0 /* SessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8253B422495382C00310EC0 /* SessionData.swift */; };
 		A83A80DD24926C7600D76D15 /* QuizColCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83A80DB24926C7600D76D15 /* QuizColCell.swift */; };
 		A83A80DE24926C7600D76D15 /* QuizColCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A83A80DC24926C7600D76D15 /* QuizColCell.xib */; };
 		A8471A1A248D2AC4004A80BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8471A19248D2AC4004A80BD /* AppDelegate.swift */; };
@@ -47,6 +54,13 @@
 		8E8374FE6B4F3F09C774EDC8 /* Pods-FunnyQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunnyQuiz.debug.xcconfig"; path = "Target Support Files/Pods-FunnyQuiz/Pods-FunnyQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 		A806D40F2492847C00534999 /* PlayingQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingQuizVC.swift; sourceTree = "<group>"; };
 		A806D4102492847C00534999 /* PlayingQuizVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayingQuizVC.xib; sourceTree = "<group>"; };
+		A8253B3324951C3D00310EC0 /* ListUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUserVC.swift; sourceTree = "<group>"; };
+		A8253B3424951C3D00310EC0 /* ListUserVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListUserVC.xib; sourceTree = "<group>"; };
+		A8253B3824951CE200310EC0 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		A8253B3924951CE200310EC0 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		A8253B3E2495339500310EC0 /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
+		A8253B3F2495339500310EC0 /* ChangePasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasswordVC.xib; sourceTree = "<group>"; };
+		A8253B422495382C00310EC0 /* SessionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionData.swift; sourceTree = "<group>"; };
 		A83A80DB24926C7600D76D15 /* QuizColCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizColCell.swift; sourceTree = "<group>"; };
 		A83A80DC24926C7600D76D15 /* QuizColCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizColCell.xib; sourceTree = "<group>"; };
 		A8471A16248D2AC4004A80BD /* FunnyQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunnyQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +113,49 @@
 				6C93E7E2137CD065510360AD /* Pods-FunnyQuiz.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A8253B3124951C1700310EC0 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				A8253B3724951CC900310EC0 /* TableCell */,
+				A8253B3324951C3D00310EC0 /* ListUserVC.swift */,
+				A8253B3424951C3D00310EC0 /* ListUserVC.xib */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		A8253B3224951C2000310EC0 /* Revenue */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Revenue;
+			sourceTree = "<group>";
+		};
+		A8253B3724951CC900310EC0 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				A8253B3824951CE200310EC0 /* UserCell.swift */,
+				A8253B3924951CE200310EC0 /* UserCell.xib */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
+		A8253B3C2495334900310EC0 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				A8253B3D2495335700310EC0 /* ChangePassword */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		A8253B3D2495335700310EC0 /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				A8253B3E2495339500310EC0 /* ChangePasswordVC.swift */,
+				A8253B3F2495339500310EC0 /* ChangePasswordVC.xib */,
+			);
+			path = ChangePassword;
 			sourceTree = "<group>";
 		};
 		A83A80DF24926C7D00D76D15 /* CollectionCell */ = {
@@ -181,6 +238,7 @@
 				A8471A3A248D3939004A80BD /* Constant.swift */,
 				A8471A44248D3FF4004A80BD /* BaseViewController.swift */,
 				A8471A48248D50C4004A80BD /* Extensions.swift */,
+				A8253B422495382C00310EC0 /* SessionData.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -216,6 +274,8 @@
 		A85DCE7F2491CAB7006967A8 /* Admin */ = {
 			isa = PBXGroup;
 			children = (
+				A8253B3224951C2000310EC0 /* Revenue */,
+				A8253B3124951C1700310EC0 /* User */,
 				A85DCE842491CAF3006967A8 /* Quiz */,
 			);
 			path = Admin;
@@ -246,6 +306,7 @@
 		A8BA44C1249129350003C109 /* TabAccount */ = {
 			isa = PBXGroup;
 			children = (
+				A8253B3C2495334900310EC0 /* User */,
 				A85DCE7F2491CAB7006967A8 /* Admin */,
 				A8BA44C424912CF40003C109 /* TableCell */,
 				A8BA44C22491296C0003C109 /* AccountVC.swift */,
@@ -333,6 +394,9 @@
 				A8471A4D248D55A0004A80BD /* Tabbar.storyboard in Resources */,
 				A8471A26248D2AC5004A80BD /* LaunchScreen.storyboard in Resources */,
 				A8471A34248D2C8A004A80BD /* Quicksand-Regular.ttf in Resources */,
+				A8253B412495339500310EC0 /* ChangePasswordVC.xib in Resources */,
+				A8253B3B24951CE200310EC0 /* UserCell.xib in Resources */,
+				A8253B3624951C3D00310EC0 /* ListUserVC.xib in Resources */,
 				A83A80DE24926C7600D76D15 /* QuizColCell.xib in Resources */,
 				A8471A35248D2C8A004A80BD /* Quicksand-Medium.ttf in Resources */,
 				A8471A23248D2AC5004A80BD /* Assets.xcassets in Resources */,
@@ -426,19 +490,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8253B402495339500310EC0 /* ChangePasswordVC.swift in Sources */,
 				A8471A1E248D2AC4004A80BD /* ViewController.swift in Sources */,
 				A8471A1A248D2AC4004A80BD /* AppDelegate.swift in Sources */,
 				A85DCE8A24920D0B006967A8 /* Quiz.swift in Sources */,
 				A8471A1C248D2AC4004A80BD /* SceneDelegate.swift in Sources */,
 				A806D4112492847C00534999 /* PlayingQuizVC.swift in Sources */,
+				A8253B432495382C00310EC0 /* SessionData.swift in Sources */,
 				A83A80DD24926C7600D76D15 /* QuizColCell.swift in Sources */,
 				A8471A3B248D3939004A80BD /* Constant.swift in Sources */,
 				A8BA44C0249128340003C109 /* QuizVC.swift in Sources */,
 				A8471A4B248D542C004A80BD /* User.swift in Sources */,
 				A8BA44C32491296C0003C109 /* AccountVC.swift in Sources */,
 				A8471A41248D3B4A004A80BD /* RegisterVC.swift in Sources */,
+				A8253B3524951C3D00310EC0 /* ListUserVC.swift in Sources */,
 				A85DCE822491CAE2006967A8 /* QuizManagementVC.swift in Sources */,
 				A8471A45248D3FF4004A80BD /* BaseViewController.swift in Sources */,
+				A8253B3A24951CE200310EC0 /* UserCell.swift in Sources */,
 				A85DCE872491CB10006967A8 /* NewQuizVC.swift in Sources */,
 				A8BA44C724912D110003C109 /* AccountCell.swift in Sources */,
 				A8471A49248D50C4004A80BD /* Extensions.swift in Sources */,
