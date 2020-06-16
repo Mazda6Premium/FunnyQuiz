@@ -44,7 +44,7 @@ class NewQuizVC: BaseViewController {
     
     func randomImage() {
         randomAnswer()
-        let imageQuiz = AnimalQuiz()
+        let imageQuiz = WeaponQuiz()
         self.arrayImage = imageQuiz.arrayImage
         
         // RANDOM WITHOUT DUPLICATE NUMBER
@@ -132,7 +132,7 @@ class NewQuizVC: BaseViewController {
         tfImg2.text = ""
         tfImg3.text = ""
         tfImg4.text = ""
-        
+        tfQuestion.becomeFirstResponder()
         timer.invalidate()
     }
 }

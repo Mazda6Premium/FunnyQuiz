@@ -42,6 +42,9 @@
 		A85DCE872491CB10006967A8 /* NewQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85DCE852491CB10006967A8 /* NewQuizVC.swift */; };
 		A85DCE882491CB10006967A8 /* NewQuizVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A85DCE862491CB10006967A8 /* NewQuizVC.xib */; };
 		A85DCE8A24920D0B006967A8 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85DCE8924920D0B006967A8 /* Quiz.swift */; };
+		A873BFD32497B3B2002BF85D /* CampingQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873BFD22497B3B2002BF85D /* CampingQuiz.swift */; };
+		A873BFD52497C762002BF85D /* WeaponQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873BFD42497C762002BF85D /* WeaponQuiz.swift */; };
+		A873BFD72497CEBD002BF85D /* JobQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873BFD62497CEBD002BF85D /* JobQuiz.swift */; };
 		A8B3BE33249610A500DA5905 /* AchievementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3BE31249610A500DA5905 /* AchievementVC.swift */; };
 		A8B3BE34249610A500DA5905 /* AchievementVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B3BE32249610A500DA5905 /* AchievementVC.xib */; };
 		A8B3BE362496120C00DA5905 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3BE352496120C00DA5905 /* Achievement.swift */; };
@@ -93,13 +96,16 @@
 		A85DCE852491CB10006967A8 /* NewQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuizVC.swift; sourceTree = "<group>"; };
 		A85DCE862491CB10006967A8 /* NewQuizVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewQuizVC.xib; sourceTree = "<group>"; };
 		A85DCE8924920D0B006967A8 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Quiz.swift; path = FunnyQuiz/Controller/TabAccount/Admin/Quiz/Quiz.swift; sourceTree = SOURCE_ROOT; };
+		A873BFD22497B3B2002BF85D /* CampingQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampingQuiz.swift; sourceTree = "<group>"; };
+		A873BFD42497C762002BF85D /* WeaponQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponQuiz.swift; sourceTree = "<group>"; };
+		A873BFD62497CEBD002BF85D /* JobQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobQuiz.swift; sourceTree = "<group>"; };
 		A8B3BE31249610A500DA5905 /* AchievementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementVC.swift; sourceTree = "<group>"; };
 		A8B3BE32249610A500DA5905 /* AchievementVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AchievementVC.xib; sourceTree = "<group>"; };
 		A8B3BE352496120C00DA5905 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Achievement.swift; path = FunnyQuiz/Controller/TabAccount/User/Achievement/Achievement.swift; sourceTree = SOURCE_ROOT; };
 		A8B3BE37249667EB00DA5905 /* RevenueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueVC.swift; sourceTree = "<group>"; };
 		A8B3BE38249667EB00DA5905 /* RevenueVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RevenueVC.xib; sourceTree = "<group>"; };
 		A8B3BE3B2496838F00DA5905 /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
-		A8B3BE3F2496937000DA5905 /* AnimalQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnimalQuiz.swift; path = FunnyQuiz/Base/AnimalQuiz.swift; sourceTree = SOURCE_ROOT; };
+		A8B3BE3F2496937000DA5905 /* AnimalQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnimalQuiz.swift; path = FunnyQuiz/Model/Quiz/AnimalQuiz.swift; sourceTree = SOURCE_ROOT; };
 		A8BA44BF249128340003C109 /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
 		A8BA44C22491296C0003C109 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,10 +236,10 @@
 		A8471A36248D350E004A80BD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A873BFD12497B399002BF85D /* Quiz */,
 				A8471A4A248D542C004A80BD /* User.swift */,
 				A85DCE8924920D0B006967A8 /* Quiz.swift */,
 				A8B3BE352496120C00DA5905 /* Achievement.swift */,
-				A8B3BE3F2496937000DA5905 /* AnimalQuiz.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -304,6 +310,17 @@
 				A85DCE812491CAE2006967A8 /* QuizManagementVC.xib */,
 				A85DCE852491CB10006967A8 /* NewQuizVC.swift */,
 				A85DCE862491CB10006967A8 /* NewQuizVC.xib */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		A873BFD12497B399002BF85D /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				A8B3BE3F2496937000DA5905 /* AnimalQuiz.swift */,
+				A873BFD22497B3B2002BF85D /* CampingQuiz.swift */,
+				A873BFD42497C762002BF85D /* WeaponQuiz.swift */,
+				A873BFD62497CEBD002BF85D /* JobQuiz.swift */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -515,10 +532,13 @@
 				A8B3BE402496937000DA5905 /* AnimalQuiz.swift in Sources */,
 				A806D4112492847C00534999 /* PlayingQuizVC.swift in Sources */,
 				A8253B432495382C00310EC0 /* SessionData.swift in Sources */,
+				A873BFD72497CEBD002BF85D /* JobQuiz.swift in Sources */,
 				A83A80DD24926C7600D76D15 /* QuizColCell.swift in Sources */,
 				A8471A3B248D3939004A80BD /* Constant.swift in Sources */,
+				A873BFD32497B3B2002BF85D /* CampingQuiz.swift in Sources */,
 				A8BA44C0249128340003C109 /* QuizVC.swift in Sources */,
 				A8471A4B248D542C004A80BD /* User.swift in Sources */,
+				A873BFD52497C762002BF85D /* WeaponQuiz.swift in Sources */,
 				A8BA44C32491296C0003C109 /* AccountVC.swift in Sources */,
 				A8471A41248D3B4A004A80BD /* RegisterVC.swift in Sources */,
 				A8253B3524951C3D00310EC0 /* ListUserVC.swift in Sources */,
