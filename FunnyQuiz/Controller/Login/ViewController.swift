@@ -23,11 +23,30 @@ class ViewController: BaseViewController {
         // Do any additional setup after loading the view.
         setupUI()
         fakeData()
+        checkForceUpdate()
     }
     
     func fakeData() {
         tfEmail.text = "nttrung254@gmail.com"
         tfPassword.text = "123456"
+    }
+    
+    func checkForceUpdate() {
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        databaseReference.child("ForceUpdate").observe(.value) { (snapshot) in
+            if let dict = snapshot.value as? [String: Any] {
+                let storeVersion = dict["storeVersion"] as? String
+                if appVersion != storeVersion {
+                    self.showPopupForceUpdate()
+                }
+            }
+        }
+    }
+    
+    func showPopupForceUpdate() {
+        let vc = ForceUpdateVC(nibName: "ForceUpdateVC", bundle: nil)
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil)
     }
     
     func setupUI() {

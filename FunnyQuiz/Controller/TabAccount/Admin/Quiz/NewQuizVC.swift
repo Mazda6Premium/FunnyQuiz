@@ -44,7 +44,7 @@ class NewQuizVC: BaseViewController {
     
     func randomImage() {
         randomAnswer()
-        let imageQuiz = WeaponQuiz()
+        let imageQuiz = SportQuiz()
         self.arrayImage = imageQuiz.arrayImage
         
         // RANDOM WITHOUT DUPLICATE NUMBER
@@ -152,7 +152,9 @@ extension NewQuizVC: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == tfIndex {
-            self.indexQuestion = Int(tfIndex.text!)!
+            guard let text = tfIndex.text else {return}
+            guard let indexQ = Int(text) else {return}
+            self.indexQuestion = indexQ
         }
     }
 }

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Bold.ttf">
+            <string>Quicksand-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ForceUpdateVC" customModule="FunnyQuiz" customModuleProvider="target">
+            <connections>
+                <outlet property="btnUpdate" destination="efM-Xs-zRO" id="4a1-wD-LfM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewPopup" destination="CTJ-Ml-zdV" id="LKV-cc-wSJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTJ-Ml-zdV">
+                    <rect key="frame" x="10" y="345" width="394" height="206.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vocabulary Quizzes has the new version in apple store. Please update to get more quizzes and have a better experience in app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUd-m5-Y3Y">
+                            <rect key="frame" x="20" y="70" width="354" height="56.5"/>
+                            <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6c-hM-htM">
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update version" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W03-kc-AHR">
+                                    <rect key="frame" x="10" y="9" width="374" height="21.5"/>
+                                    <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.45098039220000002" green="0.23137254900000001" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="W03-kc-AHR" firstAttribute="leading" secondItem="e6c-hM-htM" secondAttribute="leading" constant="10" id="TNn-9u-jTX"/>
+                                <constraint firstAttribute="trailing" secondItem="W03-kc-AHR" secondAttribute="trailing" constant="10" id="aUR-ZF-Uph"/>
+                                <constraint firstItem="W03-kc-AHR" firstAttribute="centerX" secondItem="e6c-hM-htM" secondAttribute="centerX" id="gvl-ka-aIM"/>
+                                <constraint firstItem="W03-kc-AHR" firstAttribute="centerY" secondItem="e6c-hM-htM" secondAttribute="centerY" id="kpJ-9q-0GK"/>
+                                <constraint firstAttribute="height" constant="40" id="mhx-4y-HvI"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efM-Xs-zRO">
+                            <rect key="frame" x="122" y="156.5" width="150" height="40"/>
+                            <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="XMS-AR-eO3"/>
+                                <constraint firstAttribute="width" constant="150" id="ls4-bl-qIE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="16"/>
+                            <state key="normal" title="Update">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="tapOnUpdate:" destination="-1" eventType="touchUpInside" id="rAR-As-3hy"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.65098039215686276" green="0.36470588235294116" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="e6c-hM-htM" secondAttribute="trailing" id="4XP-hs-7Af"/>
+                        <constraint firstItem="efM-Xs-zRO" firstAttribute="centerX" secondItem="CTJ-Ml-zdV" secondAttribute="centerX" id="GOQ-mj-Kqh"/>
+                        <constraint firstAttribute="bottom" secondItem="efM-Xs-zRO" secondAttribute="bottom" constant="10" id="JeU-De-2tZ"/>
+                        <constraint firstItem="e6c-hM-htM" firstAttribute="leading" secondItem="CTJ-Ml-zdV" secondAttribute="leading" id="LqB-bi-1CL"/>
+                        <constraint firstItem="zUd-m5-Y3Y" firstAttribute="top" secondItem="e6c-hM-htM" secondAttribute="bottom" constant="30" id="O3I-nj-t2N"/>
+                        <constraint firstItem="efM-Xs-zRO" firstAttribute="top" secondItem="zUd-m5-Y3Y" secondAttribute="bottom" constant="30" id="T5l-35-7Iq"/>
+                        <constraint firstAttribute="trailing" secondItem="zUd-m5-Y3Y" secondAttribute="trailing" constant="20" id="XsQ-jR-OIU"/>
+                        <constraint firstItem="e6c-hM-htM" firstAttribute="top" secondItem="CTJ-Ml-zdV" secondAttribute="top" id="frV-nd-mUm"/>
+                        <constraint firstItem="zUd-m5-Y3Y" firstAttribute="centerX" secondItem="CTJ-Ml-zdV" secondAttribute="centerX" id="h9n-uT-wl0"/>
+                        <constraint firstItem="zUd-m5-Y3Y" firstAttribute="leading" secondItem="CTJ-Ml-zdV" secondAttribute="leading" constant="20" id="vTk-HT-VxT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CTJ-Ml-zdV" secondAttribute="trailing" constant="10" id="3sf-x4-7GQ"/>
+                <constraint firstItem="CTJ-Ml-zdV" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="OP9-Yg-tzp"/>
+                <constraint firstItem="CTJ-Ml-zdV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="iXV-DG-v52"/>
+                <constraint firstItem="CTJ-Ml-zdV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ngJ-HP-6i0"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="96" y="25"/>
+        </view>
+    </objects>
+</document>

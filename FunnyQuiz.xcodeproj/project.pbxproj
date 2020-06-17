@@ -54,6 +54,9 @@
 		A8B3BE402496937000DA5905 /* AnimalQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3BE3F2496937000DA5905 /* AnimalQuiz.swift */; };
 		A8BA44C0249128340003C109 /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BA44BF249128340003C109 /* QuizVC.swift */; };
 		A8BA44C32491296C0003C109 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BA44C22491296C0003C109 /* AccountVC.swift */; };
+		A8FB6968249A7455008BDB9F /* SportQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB6967249A7455008BDB9F /* SportQuiz.swift */; };
+		A8FB696C249A8F69008BDB9F /* ForceUpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB696A249A8F69008BDB9F /* ForceUpdateVC.swift */; };
+		A8FB696D249A8F69008BDB9F /* ForceUpdateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8FB696B249A8F69008BDB9F /* ForceUpdateVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +111,9 @@
 		A8B3BE3F2496937000DA5905 /* AnimalQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnimalQuiz.swift; path = FunnyQuiz/Model/Quiz/AnimalQuiz.swift; sourceTree = SOURCE_ROOT; };
 		A8BA44BF249128340003C109 /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
 		A8BA44C22491296C0003C109 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
+		A8FB6967249A7455008BDB9F /* SportQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportQuiz.swift; sourceTree = "<group>"; };
+		A8FB696A249A8F69008BDB9F /* ForceUpdateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForceUpdateVC.swift; sourceTree = "<group>"; };
+		A8FB696B249A8F69008BDB9F /* ForceUpdateVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForceUpdateVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +274,7 @@
 		A8471A3D248D3B1E004A80BD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A8FB6969249A8F59008BDB9F /* ForceUpdate */,
 				A8471A43248D3DD5004A80BD /* Login */,
 				A8471A3E248D3B27004A80BD /* Register */,
 				A8BA44BE249127CC0003C109 /* TabQuiz */,
@@ -321,6 +328,7 @@
 				A873BFD22497B3B2002BF85D /* CampingQuiz.swift */,
 				A873BFD42497C762002BF85D /* WeaponQuiz.swift */,
 				A873BFD62497CEBD002BF85D /* JobQuiz.swift */,
+				A8FB6967249A7455008BDB9F /* SportQuiz.swift */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -353,6 +361,15 @@
 				A8BA44C22491296C0003C109 /* AccountVC.swift */,
 			);
 			path = TabAccount;
+			sourceTree = "<group>";
+		};
+		A8FB6969249A8F59008BDB9F /* ForceUpdate */ = {
+			isa = PBXGroup;
+			children = (
+				A8FB696A249A8F69008BDB9F /* ForceUpdateVC.swift */,
+				A8FB696B249A8F69008BDB9F /* ForceUpdateVC.xib */,
+			);
+			path = ForceUpdate;
 			sourceTree = "<group>";
 		};
 		D64A3100FF84B6FE02B22400 /* Frameworks */ = {
@@ -432,6 +449,7 @@
 				A8253B3624951C3D00310EC0 /* ListUserVC.xib in Resources */,
 				A83A80DE24926C7600D76D15 /* QuizColCell.xib in Resources */,
 				A8471A35248D2C8A004A80BD /* Quicksand-Medium.ttf in Resources */,
+				A8FB696D249A8F69008BDB9F /* ForceUpdateVC.xib in Resources */,
 				A8B3BE34249610A500DA5905 /* AchievementVC.xib in Resources */,
 				A8471A23248D2AC5004A80BD /* Assets.xcassets in Resources */,
 				A8471A21248D2AC4004A80BD /* Main.storyboard in Resources */,
@@ -535,9 +553,11 @@
 				A873BFD72497CEBD002BF85D /* JobQuiz.swift in Sources */,
 				A83A80DD24926C7600D76D15 /* QuizColCell.swift in Sources */,
 				A8471A3B248D3939004A80BD /* Constant.swift in Sources */,
+				A8FB696C249A8F69008BDB9F /* ForceUpdateVC.swift in Sources */,
 				A873BFD32497B3B2002BF85D /* CampingQuiz.swift in Sources */,
 				A8BA44C0249128340003C109 /* QuizVC.swift in Sources */,
 				A8471A4B248D542C004A80BD /* User.swift in Sources */,
+				A8FB6968249A7455008BDB9F /* SportQuiz.swift in Sources */,
 				A873BFD52497C762002BF85D /* WeaponQuiz.swift in Sources */,
 				A8BA44C32491296C0003C109 /* AccountVC.swift in Sources */,
 				A8471A41248D3B4A004A80BD /* RegisterVC.swift in Sources */,
@@ -695,6 +715,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2J3K999PRZ;
 				INFOPLIST_FILE = FunnyQuiz/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -702,10 +723,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = Fighting.FunnyQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -715,6 +737,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2J3K999PRZ;
 				INFOPLIST_FILE = FunnyQuiz/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -722,10 +745,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = Fighting.FunnyQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

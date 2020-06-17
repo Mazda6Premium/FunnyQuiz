@@ -167,9 +167,22 @@ class PlayingQuizVC: BaseViewController {
         
         addBorder(views: otherViews, width: 0, color: UIColor.clear.cgColor)
         
+        let screenType = UIDevice.current.screenType
+        switch screenType {
+        case .iPhones_4_4S:
+            let bottomOffset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.size.height)
+            scrollView.setContentOffset(bottomOffset, animated: true)
+        case .iPhones_5_5s_5c_SE:
+            let bottomOffset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.size.height)
+            scrollView.setContentOffset(bottomOffset, animated: true)
+        case .iPhones_6_6s_7_8:
+            let bottomOffset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.size.height)
+            scrollView.setContentOffset(bottomOffset, animated: true)
+        default:
+            break
+        }
         
-        let bottomOffset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.size.height)
-        scrollView.setContentOffset(bottomOffset, animated: true)
+
     }
     
     @IBAction func tapOnCheck(_ sender: Any) {
