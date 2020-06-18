@@ -96,6 +96,10 @@ class ViewController: BaseViewController {
     }
     
     @IBAction func tapOnForgotPassword(_ sender: Any) {
+        let vc = ForgotPasswordVC(nibName: "ForgotPasswordVC", bundle: nil)
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil)
     }
 }
+
 

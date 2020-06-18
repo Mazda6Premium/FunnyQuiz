@@ -71,9 +71,14 @@ extension QuizVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = PlayingQuizVC(nibName: "PlayingQuizVC", bundle: nil)
-        vc.category = arrayQuizMenu[indexPath.row].title
-        vc.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc, animated: true)
+        if indexPath.row < 6 {
+            let vc = PlayingQuizVC(nibName: "PlayingQuizVC", bundle: nil)
+            vc.category = arrayQuizMenu[indexPath.row].title
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            showToast(message: "Coming soon!")
+        }
+
     }
 }

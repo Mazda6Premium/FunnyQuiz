@@ -44,7 +44,7 @@ class NewQuizVC: BaseViewController {
     
     func randomImage() {
         randomAnswer()
-        let imageQuiz = SportQuiz()
+        let imageQuiz = VehicleQuiz()
         self.arrayImage = imageQuiz.arrayImage
         
         // RANDOM WITHOUT DUPLICATE NUMBER

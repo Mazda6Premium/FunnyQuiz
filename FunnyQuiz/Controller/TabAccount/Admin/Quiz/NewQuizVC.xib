@@ -33,9 +33,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="zjd-4M-y17">
-                    <rect key="frame" x="37.666666666666657" y="54" width="300" height="170"/>
+                    <rect key="frame" x="0.0" y="54" width="375" height="170"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="300" id="0Ej-49-rBV"/>
                         <constraint firstAttribute="height" constant="170" id="jX4-zb-obq"/>
                     </constraints>
                 </imageView>
@@ -160,16 +159,18 @@
                 <constraint firstItem="oPY-KW-cYN" firstAttribute="trailing" secondItem="LGM-F5-SiG" secondAttribute="trailing" id="na8-6d-jIu"/>
                 <constraint firstItem="t12-89-k1X" firstAttribute="leading" secondItem="iSw-Kd-aWU" secondAttribute="leading" id="nlR-1F-gMc"/>
                 <constraint firstItem="iSw-Kd-aWU" firstAttribute="trailing" secondItem="N8w-f1-BNB" secondAttribute="trailing" id="rML-ud-wOL"/>
+                <constraint firstItem="zjd-4M-y17" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sBy-j6-b3W"/>
                 <constraint firstItem="t12-89-k1X" firstAttribute="top" secondItem="iSw-Kd-aWU" secondAttribute="bottom" constant="20" id="vUG-VU-Lmk"/>
                 <constraint firstItem="t12-89-k1X" firstAttribute="trailing" secondItem="iSw-Kd-aWU" secondAttribute="trailing" id="wAz-eN-n82"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LGM-F5-SiG" secondAttribute="trailing" constant="20" id="wa9-fc-C2z"/>
                 <constraint firstItem="YWd-Ve-iiA" firstAttribute="trailing" secondItem="Qm8-TA-dzg" secondAttribute="trailing" id="y4e-wf-IQg"/>
+                <constraint firstAttribute="trailing" secondItem="zjd-4M-y17" secondAttribute="trailing" id="zdk-UV-0ZR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="130.40000000000001" y="152.95566502463055"/>
         </view>
     </objects>
     <resources>
-        <image name="logo" width="1022" height="799"/>
+        <image name="logo" width="1536" height="1536"/>
     </resources>
 </document>

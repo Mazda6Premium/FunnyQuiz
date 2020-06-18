@@ -48,7 +48,7 @@ class RevenueVC: BaseViewController {
             // TODO: hide spinner here
             if snapshot.exists() {
                 self.lbA1.text = "User install: \(snapshot.childrenCount - 3)"
-                let revenue = Int64((snapshot.childrenCount - 3) * 17500)
+                let revenue = Int64((snapshot.childrenCount - 3) * 31500)
                 self.lbA3.text = self.formatCurrencyInt64(revenue)
                 self.stopAnimating()
             }
@@ -75,7 +75,7 @@ class RevenueVC: BaseViewController {
             stopAnimating()
         } else {
             let userInstall = Int64(tfB1.text!)!
-            let revenue = userInstall * 17500
+            let revenue = userInstall * 31500
             lbB3.text = formatCurrencyInt64(revenue)
             stopAnimating()
         }
