@@ -16,19 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="gbS-3Q-kbI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="QMW-jg-WdV">
                                 <rect key="frame" x="0.0" y="298" width="414" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="XEO-GM-MwA"/>
+                                    <constraint firstAttribute="height" constant="300" id="CQr-EN-Swh"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.65098039215686276" green="0.36470588235294116" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gbS-3Q-kbI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="89T-px-K8W"/>
-                            <constraint firstItem="gbS-3Q-kbI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9c5-kC-gvT"/>
-                            <constraint firstItem="gbS-3Q-kbI" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="qFT-Ea-YuV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gbS-3Q-kbI" secondAttribute="trailing" id="zIf-Ht-cH8"/>
+                            <constraint firstItem="QMW-jg-WdV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IaP-b6-MNp"/>
+                            <constraint firstItem="QMW-jg-WdV" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="N91-Vr-Xtm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QMW-jg-WdV" secondAttribute="trailing" id="QLc-Nk-TE2"/>
+                            <constraint firstItem="QMW-jg-WdV" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="n9J-rb-QMt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
