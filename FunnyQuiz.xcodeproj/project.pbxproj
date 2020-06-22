@@ -57,6 +57,7 @@
 		A8B3BE402496937000DA5905 /* AnimalQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B3BE3F2496937000DA5905 /* AnimalQuiz.swift */; };
 		A8BA44C0249128340003C109 /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BA44BF249128340003C109 /* QuizVC.swift */; };
 		A8BA44C32491296C0003C109 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BA44C22491296C0003C109 /* AccountVC.swift */; };
+		A8D318FD24A0EE4D00475C0A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D318FC24A0EE4D00475C0A /* StoreKit.framework */; };
 		A8FB6968249A7455008BDB9F /* SportQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB6967249A7455008BDB9F /* SportQuiz.swift */; };
 		A8FB696C249A8F69008BDB9F /* ForceUpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FB696A249A8F69008BDB9F /* ForceUpdateVC.swift */; };
 		A8FB696D249A8F69008BDB9F /* ForceUpdateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8FB696B249A8F69008BDB9F /* ForceUpdateVC.xib */; };
@@ -117,6 +118,8 @@
 		A8B3BE3F2496937000DA5905 /* AnimalQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnimalQuiz.swift; path = FunnyQuiz/Model/Quiz/AnimalQuiz.swift; sourceTree = SOURCE_ROOT; };
 		A8BA44BF249128340003C109 /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
 		A8BA44C22491296C0003C109 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
+		A8D318FB24A0EE3F00475C0A /* FunnyQuiz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FunnyQuiz.entitlements; sourceTree = "<group>"; };
+		A8D318FC24A0EE4D00475C0A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A8FB6967249A7455008BDB9F /* SportQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportQuiz.swift; sourceTree = "<group>"; };
 		A8FB696A249A8F69008BDB9F /* ForceUpdateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForceUpdateVC.swift; sourceTree = "<group>"; };
 		A8FB696B249A8F69008BDB9F /* ForceUpdateVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForceUpdateVC.xib; sourceTree = "<group>"; };
@@ -128,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				465A285BE2C6E704112BA5FB /* Pods_FunnyQuiz.framework in Frameworks */,
+				A8D318FD24A0EE4D00475C0A /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +232,7 @@
 		A8471A18248D2AC4004A80BD /* FunnyQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				A8D318FB24A0EE3F00475C0A /* FunnyQuiz.entitlements */,
 				A8471A3D248D3B1E004A80BD /* Controller */,
 				A8471A39248D3926004A80BD /* Base */,
 				A8471A37248D3516004A80BD /* View */,
@@ -392,6 +397,7 @@
 		D64A3100FF84B6FE02B22400 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A8D318FC24A0EE4D00475C0A /* StoreKit.framework */,
 				8732FED21292212D8C709A2D /* Pods_FunnyQuiz.framework */,
 			);
 			name = Frameworks;
@@ -734,6 +740,7 @@
 			baseConfigurationReference = 8E8374FE6B4F3F09C774EDC8 /* Pods-FunnyQuiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FunnyQuiz/FunnyQuiz.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2J3K999PRZ;
@@ -743,7 +750,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Fighting.FunnyQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -756,6 +763,7 @@
 			baseConfigurationReference = 6C93E7E2137CD065510360AD /* Pods-FunnyQuiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FunnyQuiz/FunnyQuiz.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2J3K999PRZ;
@@ -765,7 +773,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Fighting.FunnyQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

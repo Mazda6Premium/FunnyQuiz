@@ -67,8 +67,11 @@ class RegisterVC: BaseViewController {
                 self.stopAnimating()
             } else {
                 if let id = authData?.user.uid {
-                    let user = User(email: email, id: id, password: password)
+
+                    let quizzes = [Quizzes(category: "Animal"), Quizzes(category: "Job")]
+                    let user = User(email: email, id: id, password: password, quizzes: quizzes)
                     databaseReference.child("Users").child(id).setValue(user.asDictionary())
+                    
                     self.stopAnimating()
                     self.showToast(message: "Register account successfully")
                     _ = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.gotoMainScreen), userInfo: nil, repeats: true)

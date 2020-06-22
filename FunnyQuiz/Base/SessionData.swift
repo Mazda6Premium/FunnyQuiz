@@ -12,4 +12,8 @@ class SessionData {
     static let shared = SessionData()
     
     var userData: User?
+    
+    func cleanSession() {
+        SessionData.shared.userData = nil
+    }
 }

@@ -90,6 +90,9 @@ extension AccountVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
         let menu = arrayMenu[indexPath.row]
         cell.lbQuizMenu.text = menu.title
         cell.imgQuizMenu.image = UIImage(named: menu.image)
+        cell.viewDim.isHidden = true
+        cell.btPrice.isHidden = true
+        
         return cell
     }
     
@@ -128,8 +131,8 @@ extension AccountVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
                 }
             case 5: //
                 try? Auth.auth().signOut()
-                SessionData.shared.userData = nil
-                
+                SessionData.shared.cleanSession()
+
                 let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginVC")
                 vc.modalPresentationStyle = .overFullScreen
                 vc.modalTransitionStyle = .crossDissolve
@@ -174,7 +177,7 @@ extension AccountVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
                 self.present(vc, animated: true, completion: nil)
             case 5: //
                 try? Auth.auth().signOut()
-                SessionData.shared.userData = nil
+                SessionData.shared.cleanSession()
                 
                 let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginVC")
                 vc.modalPresentationStyle = .overFullScreen

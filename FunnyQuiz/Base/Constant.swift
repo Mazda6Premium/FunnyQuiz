@@ -21,5 +21,5 @@ let CORNER_VIEW_LOADING: CGFloat = 8
 let databaseReference = Database.database().reference()
 let storageReference = Storage.storage().reference()
 
-let ADMIN_ID = "Q5OVd2vX8tWB7Jipc5O8bE0iNom2"
+let ADMIN_ID = "e0vDyuvBQdUH6NTp1lopeSh29a73"
 
