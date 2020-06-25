@@ -27,13 +27,15 @@ class QuizVC: BaseViewController {
                          QuizMenu(category: "Sport", image: "ic_sport"),
                          QuizMenu(category: "Vehicle", image: "ic_vehicle"),
                          QuizMenu(category: "Weapon", image: "ic_weapon"),
-                         QuizMenu(category: "Camping", image: "ic_camping"),
-                         QuizMenu(category: "Kid", image: "ic_kid"),
-                         QuizMenu(category: "Science", image: "ic_science"),
-                         QuizMenu(category: "Cinema", image: "ic_cinema"),
-                         QuizMenu(category: "School", image: "ic_school"),
-                         QuizMenu(category: "Restaurant", image: "ic_restaurant"),
-                         QuizMenu(category: "Social Media", image: "ic_socialmedia")]
+                         QuizMenu(category: "Camping", image: "ic_camping")
+                         ]
+    
+//    QuizMenu(category: "Kid", image: "ic_kid"),
+//    QuizMenu(category: "Science", image: "ic_science"),
+//    QuizMenu(category: "Cinema", image: "ic_cinema"),
+//    QuizMenu(category: "School", image: "ic_school"),
+//    QuizMenu(category: "Restaurant", image: "ic_restaurant"),
+//    QuizMenu(category: "Social Media", image: "ic_socialmedia")
     
     var userData: User?
     

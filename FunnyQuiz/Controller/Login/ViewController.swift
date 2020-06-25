@@ -22,7 +22,7 @@ class ViewController: BaseViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupUI()
-        fakeData()
+//        fakeData()
         checkForceUpdate()
     }
     

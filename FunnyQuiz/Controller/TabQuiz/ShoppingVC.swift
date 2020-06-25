@@ -47,7 +47,7 @@ class ShoppingVC: BaseViewController {
             let payment = SKPayment(product: myProduct)
             SKPaymentQueue.default().add(self)
             SKPaymentQueue.default().add(payment)
-            stopAnimating()
+
         }
     }
 }
@@ -72,7 +72,6 @@ extension ShoppingVC: SKProductsRequestDelegate, SKPaymentTransactionObserver {
                 break
                 
             case .purchased, .restored:
-
                 if let currentUser = Auth.auth().currentUser {
                     let user = User(buyQuizzes: true)
                     databaseReference.child("Users").child(currentUser.uid).updateChildValues(user.asDictBuyQuizzes())
@@ -80,19 +79,19 @@ extension ShoppingVC: SKProductsRequestDelegate, SKPaymentTransactionObserver {
                 
                 SKPaymentQueue.default().finishTransaction(tran)
                 SKPaymentQueue.default().remove(self)
-                
+                DispatchQueue.main.async {
+                    self.stopAnimating()
+                }
                 break
                 
             case .failed, .deferred:
                 SKPaymentQueue.default().finishTransaction(tran)
                 SKPaymentQueue.default().remove(self)
-                
                 break
                 
             default:
                 SKPaymentQueue.default().finishTransaction(tran)
                 SKPaymentQueue.default().remove(self)
-                
                 break
             }
         }

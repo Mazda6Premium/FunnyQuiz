@@ -52,13 +52,11 @@ class BaseViewController: UIViewController {
     
     func startAnimating() {
         viewIndicator.isHidden = false
-        view.isUserInteractionEnabled = false
         loadingIndicator?.startAnimating()
     }
     
     func stopAnimating() {
         loadingIndicator?.stopAnimating()
-        view.isUserInteractionEnabled = true
         viewIndicator.isHidden = true
     }
     
