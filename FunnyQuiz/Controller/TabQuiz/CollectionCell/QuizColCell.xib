@@ -42,31 +42,38 @@
                                 <rect key="frame" x="0.0" y="0.0" width="170" height="176"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rax-lj-uDm">
-                                <rect key="frame" x="112" y="8" width="50" height="25"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MlX-I3-OeO">
+                                <rect key="frame" x="132" y="8" width="30" height="30"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cart" translatesAutoresizingMaskIntoConstraints="NO" id="w3b-gO-B5Y">
+                                        <rect key="frame" x="7.5" y="7.5" width="15" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="15" id="6g9-q5-6pa"/>
+                                            <constraint firstAttribute="height" constant="15" id="7NV-cy-DyP"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.65098039215686276" green="0.36470588235294116" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="OF7-lg-1HU"/>
-                                    <constraint firstAttribute="height" constant="25" id="ovt-Qu-F80"/>
+                                    <constraint firstItem="w3b-gO-B5Y" firstAttribute="centerY" secondItem="MlX-I3-OeO" secondAttribute="centerY" id="4F2-tW-6C6"/>
+                                    <constraint firstAttribute="height" constant="30" id="EWT-aC-Kyh"/>
+                                    <constraint firstItem="w3b-gO-B5Y" firstAttribute="centerX" secondItem="MlX-I3-OeO" secondAttribute="centerX" id="Wkt-dO-ApE"/>
+                                    <constraint firstAttribute="width" constant="30" id="vyE-HD-em1"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="15"/>
-                                <state key="normal" title="$0.99">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.45098039220000002" green="0.23137254900000001" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7sR-2t-vwb" firstAttribute="leading" secondItem="0uS-6d-5sx" secondAttribute="leading" constant="10" id="CxU-Sc-fmJ"/>
+                            <constraint firstItem="MlX-I3-OeO" firstAttribute="top" secondItem="0uS-6d-5sx" secondAttribute="top" constant="8" id="MqJ-lU-8o7"/>
                             <constraint firstItem="25Z-kG-spP" firstAttribute="leading" secondItem="0uS-6d-5sx" secondAttribute="leading" id="QHK-Rw-Ovt"/>
                             <constraint firstItem="Rbv-HU-yFq" firstAttribute="centerX" secondItem="0uS-6d-5sx" secondAttribute="centerX" id="Wp3-50-eVY"/>
                             <constraint firstItem="7sR-2t-vwb" firstAttribute="top" secondItem="Rbv-HU-yFq" secondAttribute="bottom" constant="10" id="YoU-1O-dlZ"/>
                             <constraint firstItem="Rbv-HU-yFq" firstAttribute="centerY" secondItem="0uS-6d-5sx" secondAttribute="centerY" constant="-12" id="aeK-Fw-Jcz"/>
                             <constraint firstAttribute="bottom" secondItem="25Z-kG-spP" secondAttribute="bottom" id="dG3-yE-n4Y"/>
                             <constraint firstAttribute="trailing" secondItem="25Z-kG-spP" secondAttribute="trailing" id="hYY-3k-HVM"/>
-                            <constraint firstAttribute="trailing" secondItem="rax-lj-uDm" secondAttribute="trailing" constant="8" id="uw1-Nb-ui6"/>
                             <constraint firstItem="25Z-kG-spP" firstAttribute="top" secondItem="0uS-6d-5sx" secondAttribute="top" id="wHU-By-EZ1"/>
-                            <constraint firstItem="rax-lj-uDm" firstAttribute="top" secondItem="0uS-6d-5sx" secondAttribute="top" constant="8" id="yzM-dM-4vs"/>
+                            <constraint firstAttribute="trailing" secondItem="MlX-I3-OeO" secondAttribute="trailing" constant="8" id="yq3-AT-HD9"/>
                             <constraint firstAttribute="trailing" secondItem="7sR-2t-vwb" secondAttribute="trailing" constant="10" id="zgP-o1-s5l"/>
                         </constraints>
                     </view>
@@ -81,13 +88,16 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="166" height="161"/>
             <connections>
-                <outlet property="btPrice" destination="rax-lj-uDm" id="T64-yX-VL4"/>
                 <outlet property="imgQuizMenu" destination="Rbv-HU-yFq" id="QEe-8e-p7s"/>
                 <outlet property="lbQuizMenu" destination="7sR-2t-vwb" id="ypt-rX-5h3"/>
                 <outlet property="viewCell" destination="0uS-6d-5sx" id="7qD-SG-4Tl"/>
                 <outlet property="viewDim" destination="25Z-kG-spP" id="kRu-MV-cAh"/>
+                <outlet property="viewShopping" destination="MlX-I3-OeO" id="oJH-zk-jMI"/>
             </connections>
             <point key="canvasLocation" x="76.811594202898561" y="172.09821428571428"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="cart" width="24" height="24"/>
+    </resources>
 </document>

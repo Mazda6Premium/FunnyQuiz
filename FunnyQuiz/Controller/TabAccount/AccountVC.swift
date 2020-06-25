@@ -91,7 +91,7 @@ extension AccountVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
         cell.lbQuizMenu.text = menu.title
         cell.imgQuizMenu.image = UIImage(named: menu.image)
         cell.viewDim.isHidden = true
-        cell.btPrice.isHidden = true
+        cell.viewShopping.isHidden = true
         
         return cell
     }

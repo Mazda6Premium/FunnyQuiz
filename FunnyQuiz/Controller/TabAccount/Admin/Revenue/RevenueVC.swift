@@ -26,6 +26,7 @@ class RevenueVC: BaseViewController {
     @IBOutlet weak var lbB3: UILabel!
     @IBOutlet weak var btCalculate: UIButton!
     
+    var userBuyApp = [Bool]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,14 +44,19 @@ class RevenueVC: BaseViewController {
     }
     
     func getDataUser() {
-        databaseReference.child("Users").observe(.value, with: { (snapshot) in
+        databaseReference.child("Users").observe(.childAdded, with: { (snapshot) in
             self.startAnimating()
-            // TODO: hide spinner here
-            if snapshot.exists() {
-                self.lbA1.text = "User install: \(snapshot.childrenCount - 3)"
-                let revenue = Int64((snapshot.childrenCount - 3) * 31500)
-                self.lbA3.text = self.formatCurrencyInt64(revenue)
-                self.stopAnimating()
+            databaseReference.child("Users").child(snapshot.key).observe(.value) { (data) in
+                if let dict = data.value as? [String: Any] {
+                    let user = User(dict: dict)
+                    if user.buyQuizzes {
+                        self.userBuyApp.append(user.buyQuizzes)
+                        let revenue = Int64((self.userBuyApp.count) * 31500)
+                        self.lbA1.text = "User buy: \(self.userBuyApp.count)"
+                        self.lbA3.text = self.formatCurrencyInt64(revenue)
+                    }
+                    self.stopAnimating()
+                }
             }
         })
     }

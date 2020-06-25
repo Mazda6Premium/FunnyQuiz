@@ -10,6 +10,8 @@
 		465A285BE2C6E704112BA5FB /* Pods_FunnyQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8732FED21292212D8C709A2D /* Pods_FunnyQuiz.framework */; };
 		A806D4112492847C00534999 /* PlayingQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A806D40F2492847C00534999 /* PlayingQuizVC.swift */; };
 		A806D4122492847C00534999 /* PlayingQuizVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A806D4102492847C00534999 /* PlayingQuizVC.xib */; };
+		A80884E224A4F73C0092EA07 /* ShoppingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80884E024A4F73C0092EA07 /* ShoppingVC.swift */; };
+		A80884E324A4F73C0092EA07 /* ShoppingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A80884E124A4F73C0092EA07 /* ShoppingVC.xib */; };
 		A8253B3524951C3D00310EC0 /* ListUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8253B3324951C3D00310EC0 /* ListUserVC.swift */; };
 		A8253B3624951C3D00310EC0 /* ListUserVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8253B3424951C3D00310EC0 /* ListUserVC.xib */; };
 		A8253B3A24951CE200310EC0 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8253B3824951CE200310EC0 /* UserCell.swift */; };
@@ -69,6 +71,8 @@
 		8E8374FE6B4F3F09C774EDC8 /* Pods-FunnyQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunnyQuiz.debug.xcconfig"; path = "Target Support Files/Pods-FunnyQuiz/Pods-FunnyQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 		A806D40F2492847C00534999 /* PlayingQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingQuizVC.swift; sourceTree = "<group>"; };
 		A806D4102492847C00534999 /* PlayingQuizVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayingQuizVC.xib; sourceTree = "<group>"; };
+		A80884E024A4F73C0092EA07 /* ShoppingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingVC.swift; sourceTree = "<group>"; };
+		A80884E124A4F73C0092EA07 /* ShoppingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingVC.xib; sourceTree = "<group>"; };
 		A8253B3324951C3D00310EC0 /* ListUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUserVC.swift; sourceTree = "<group>"; };
 		A8253B3424951C3D00310EC0 /* ListUserVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListUserVC.xib; sourceTree = "<group>"; };
 		A8253B3824951CE200310EC0 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -371,6 +375,8 @@
 				A8BA44BF249128340003C109 /* QuizVC.swift */,
 				A806D40F2492847C00534999 /* PlayingQuizVC.swift */,
 				A806D4102492847C00534999 /* PlayingQuizVC.xib */,
+				A80884E024A4F73C0092EA07 /* ShoppingVC.swift */,
+				A80884E124A4F73C0092EA07 /* ShoppingVC.xib */,
 			);
 			path = TabQuiz;
 			sourceTree = "<group>";
@@ -469,6 +475,7 @@
 				A8471A34248D2C8A004A80BD /* Quicksand-Regular.ttf in Resources */,
 				A8253B412495339500310EC0 /* ChangePasswordVC.xib in Resources */,
 				A8253B3B24951CE200310EC0 /* UserCell.xib in Resources */,
+				A80884E324A4F73C0092EA07 /* ShoppingVC.xib in Resources */,
 				A8253B3624951C3D00310EC0 /* ListUserVC.xib in Resources */,
 				A83A80DE24926C7600D76D15 /* QuizColCell.xib in Resources */,
 				A8471A35248D2C8A004A80BD /* Quicksand-Medium.ttf in Resources */,
@@ -577,6 +584,7 @@
 				A806D4112492847C00534999 /* PlayingQuizVC.swift in Sources */,
 				A8253B432495382C00310EC0 /* SessionData.swift in Sources */,
 				A873BFD72497CEBD002BF85D /* JobQuiz.swift in Sources */,
+				A80884E224A4F73C0092EA07 /* ShoppingVC.swift in Sources */,
 				A83A80DD24926C7600D76D15 /* QuizColCell.swift in Sources */,
 				A8471A3B248D3939004A80BD /* Constant.swift in Sources */,
 				A8FB696C249A8F69008BDB9F /* ForceUpdateVC.swift in Sources */,
@@ -750,7 +758,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = Fighting.FunnyQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -773,7 +781,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = Fighting.FunnyQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -8,48 +8,24 @@
 
 import Foundation
 
-class Quizzes {
-    var category = ""
-    
-    init(category: String) {
-        self.category = category
-    }
-    
-    init(fromDict: [String: Any]) {
-        self.category = fromDict["category"] as? String ?? ""
-    }
-    
-    func asDict() -> [String: Any] {
-        return [
-            "category": self.category
-        ]
-    }
-}
-
 class User {
     var email = ""
     var id = ""
     var password = ""
-    var quizzes = [Quizzes]()
+    var buyQuizzes = false
     
-    init(email: String, id: String, password: String, quizzes: [Quizzes]) {
+    init(email: String, id: String, password: String, buyQuizzes: Bool) {
         self.email = email
         self.id = id
         self.password = password
-        self.quizzes = quizzes
-    }
-    
-    init(quizzes: [Quizzes]) {
-        self.quizzes = quizzes
+        self.buyQuizzes = buyQuizzes
     }
     
     init(dict: [String: Any]) {
         self.email = dict["email"] as? String ?? ""
         self.id = dict["id"] as? String ?? ""
         self.password = dict["password"] as? String ?? ""
-        if let data = dict["quizzes"] as? [[String: Any]] {
-            self.quizzes = data.map({Quizzes(fromDict: $0)})
-        }
+        self.buyQuizzes = dict["buyQuizzes"] as? Bool ?? false
     }
     
     func asDictionary() -> [String: Any] {
@@ -57,13 +33,17 @@ class User {
             "email": self.email,
             "password": self.password,
             "id": self.id,
-            "quizzes": self.quizzes.map({$0.asDict()})
+            "buyQuizzes": self.buyQuizzes
         ]
     }
     
-    func asDictQuizzes() -> [String: Any] {
+    init(buyQuizzes: Bool) {
+        self.buyQuizzes = buyQuizzes
+    }
+    
+    func asDictBuyQuizzes() -> [String: Any] {
         return [
-            "quizzes": self.quizzes.map({$0.asDict()})
+            "buyQuizzes": self.buyQuizzes
         ]
     }
 }
