@@ -51,7 +51,7 @@ class RevenueVC: BaseViewController {
                     let user = User(dict: dict)
                     if user.buyQuizzes {
                         self.userBuyApp.append(user.buyQuizzes)
-                        let revenue = Int64((self.userBuyApp.count) * 31500)
+                        let revenue = Int64((self.userBuyApp.count - 2) * 31500)
                         self.lbA1.text = "User buy: \(self.userBuyApp.count)"
                         self.lbA3.text = self.formatCurrencyInt64(revenue)
                     }
@@ -77,7 +77,7 @@ class RevenueVC: BaseViewController {
         self.view.endEditing(true)
         startAnimating()
         if tfB1.text == "" {
-            showToast(message: "Please enter the number of user install app")
+            showToast(message: "Please enter the number of user buy app")
             stopAnimating()
         } else {
             let userInstall = Int64(tfB1.text!)!
