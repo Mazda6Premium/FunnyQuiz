@@ -38,16 +38,21 @@ class ShoppingVC: BaseViewController {
     }
     
     @IBAction func tapOnBuy(_ sender: Any) {
-        DispatchQueue.main.async {
-            self.startAnimating()
-        }
-        
-        guard let myProduct = self.myProduct else {return}
-        if SKPaymentQueue.canMakePayments() {
-            let payment = SKPayment(product: myProduct)
-            SKPaymentQueue.default().add(self)
-            SKPaymentQueue.default().add(payment)
-
+        if SessionData.shared.userData != nil {
+            DispatchQueue.main.async {
+                self.startAnimating()
+            }
+            
+            guard let myProduct = self.myProduct else {return}
+            if SKPaymentQueue.canMakePayments() {
+                let payment = SKPayment(product: myProduct)
+                SKPaymentQueue.default().add(self)
+                SKPaymentQueue.default().add(payment)
+            }
+        } else {
+            let vc = ShowPopupLoginVC(nibName: "ShowPopupLoginVC", bundle: nil)
+            vc.modalPresentationStyle = .overCurrentContext
+            self.present(vc, animated: true, completion: nil)
         }
     }
 }

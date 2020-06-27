@@ -57,8 +57,8 @@ class QuizVC: BaseViewController {
     }
     
     func getDataBuyQuiz() {
-        startAnimating()
         if let user = Auth.auth().currentUser {
+            startAnimating()
             databaseReference.child("Users").child(user.uid).observe(.value) { (snapshot) in
                 if let dict = snapshot.value as? [String: Any] {
                     let user = User(dict: dict)
@@ -96,6 +96,15 @@ extension QuizVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                 cell.viewDim.isHidden = true
                 cell.viewShopping.isHidden = true
             }
+        } else {
+            switch indexPath.row {
+            case 0, 1:
+                cell.viewDim.isHidden = true
+                cell.viewShopping.isHidden = true
+            default:
+                cell.viewDim.isHidden = false
+                cell.viewShopping.isHidden = false
+            }
         }
         
         cell.viewShopping.tag = indexPath.row
@@ -127,6 +136,18 @@ extension QuizVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             } else {
                 let vc = PlayingQuizVC(nibName: "PlayingQuizVC", bundle: nil)
                 vc.category = arrayQuizMenu[indexPath.row].category
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        } else {
+            switch indexPath.row {
+            case 0, 1:
+                let vc = PlayingQuizVC(nibName: "PlayingQuizVC", bundle: nil)
+                vc.category = arrayQuizMenu[indexPath.row].category
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+            default:
+                let vc = ShoppingVC(nibName: "ShoppingVC", bundle: nil)
                 vc.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(vc, animated: true)
             }

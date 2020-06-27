@@ -63,7 +63,7 @@ class RegisterVC: BaseViewController {
     func registerUser(email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { (authData, error) in
             if error != nil {
-                self.showToast(message: "Something went wrong, please try again later")
+                self.showToast(message: error!.localizedDescription)
                 self.stopAnimating()
             } else {
                 if let id = authData?.user.uid {
@@ -86,6 +86,17 @@ class RegisterVC: BaseViewController {
         let vc = UIStoryboard(name: "Tabbar", bundle: nil).instantiateViewController(withIdentifier: "tabbarVC")
         vc.modalTransitionStyle = .crossDissolve
         vc.modalPresentationStyle = .overFullScreen
+        
+        // SAVE TO SESSION
+        if let currentUser = Auth.auth().currentUser {
+            databaseReference.child("Users").child(currentUser.uid).observe(.value) { (snapshot) in
+                if let dict = snapshot.value as? [String: Any] {
+                    let user = User(dict: dict)
+                    SessionData.shared.userData = user
+                }
+            }
+        }
+        
         self.present(vc, animated: true, completion: nil)
     }
 }

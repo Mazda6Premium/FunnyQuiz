@@ -12,6 +12,8 @@
 		A806D4122492847C00534999 /* PlayingQuizVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A806D4102492847C00534999 /* PlayingQuizVC.xib */; };
 		A80884E224A4F73C0092EA07 /* ShoppingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80884E024A4F73C0092EA07 /* ShoppingVC.swift */; };
 		A80884E324A4F73C0092EA07 /* ShoppingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A80884E124A4F73C0092EA07 /* ShoppingVC.xib */; };
+		A822C44824A7409400A289B9 /* ShowPopupLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A822C44624A7409400A289B9 /* ShowPopupLoginVC.swift */; };
+		A822C44924A7409400A289B9 /* ShowPopupLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A822C44724A7409400A289B9 /* ShowPopupLoginVC.xib */; };
 		A8253B3524951C3D00310EC0 /* ListUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8253B3324951C3D00310EC0 /* ListUserVC.swift */; };
 		A8253B3624951C3D00310EC0 /* ListUserVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8253B3424951C3D00310EC0 /* ListUserVC.xib */; };
 		A8253B3A24951CE200310EC0 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8253B3824951CE200310EC0 /* UserCell.swift */; };
@@ -73,6 +75,8 @@
 		A806D4102492847C00534999 /* PlayingQuizVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayingQuizVC.xib; sourceTree = "<group>"; };
 		A80884E024A4F73C0092EA07 /* ShoppingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingVC.swift; sourceTree = "<group>"; };
 		A80884E124A4F73C0092EA07 /* ShoppingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingVC.xib; sourceTree = "<group>"; };
+		A822C44624A7409400A289B9 /* ShowPopupLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPopupLoginVC.swift; sourceTree = "<group>"; };
+		A822C44724A7409400A289B9 /* ShowPopupLoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowPopupLoginVC.xib; sourceTree = "<group>"; };
 		A8253B3324951C3D00310EC0 /* ListUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUserVC.swift; sourceTree = "<group>"; };
 		A8253B3424951C3D00310EC0 /* ListUserVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListUserVC.xib; sourceTree = "<group>"; };
 		A8253B3824951CE200310EC0 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -85,7 +89,7 @@
 		A835BEF3249BD2E700EE27A3 /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
 		A83A80DB24926C7600D76D15 /* QuizColCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizColCell.swift; sourceTree = "<group>"; };
 		A83A80DC24926C7600D76D15 /* QuizColCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizColCell.xib; sourceTree = "<group>"; };
-		A8471A16248D2AC4004A80BD /* FunnyQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunnyQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8471A16248D2AC4004A80BD /* Vocabulary Quizzes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vocabulary Quizzes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8471A19248D2AC4004A80BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8471A1B248D2AC4004A80BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A8471A1D248D2AC4004A80BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -228,7 +232,7 @@
 		A8471A17248D2AC4004A80BD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A8471A16248D2AC4004A80BD /* FunnyQuiz.app */,
+				A8471A16248D2AC4004A80BD /* Vocabulary Quizzes.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -377,6 +381,8 @@
 				A806D4102492847C00534999 /* PlayingQuizVC.xib */,
 				A80884E024A4F73C0092EA07 /* ShoppingVC.swift */,
 				A80884E124A4F73C0092EA07 /* ShoppingVC.xib */,
+				A822C44624A7409400A289B9 /* ShowPopupLoginVC.swift */,
+				A822C44724A7409400A289B9 /* ShowPopupLoginVC.xib */,
 			);
 			path = TabQuiz;
 			sourceTree = "<group>";
@@ -428,7 +434,7 @@
 			);
 			name = FunnyQuiz;
 			productName = FunnyQuiz;
-			productReference = A8471A16248D2AC4004A80BD /* FunnyQuiz.app */;
+			productReference = A8471A16248D2AC4004A80BD /* Vocabulary Quizzes.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -470,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8471A4D248D55A0004A80BD /* Tabbar.storyboard in Resources */,
+				A822C44924A7409400A289B9 /* ShowPopupLoginVC.xib in Resources */,
 				A8B3BE3A249667EB00DA5905 /* RevenueVC.xib in Resources */,
 				A8471A26248D2AC5004A80BD /* LaunchScreen.storyboard in Resources */,
 				A8471A34248D2C8A004A80BD /* Quicksand-Regular.ttf in Resources */,
@@ -583,6 +590,7 @@
 				A835BEF0249BC34500EE27A3 /* VehicleQuiz.swift in Sources */,
 				A806D4112492847C00534999 /* PlayingQuizVC.swift in Sources */,
 				A8253B432495382C00310EC0 /* SessionData.swift in Sources */,
+				A822C44824A7409400A289B9 /* ShowPopupLoginVC.swift in Sources */,
 				A873BFD72497CEBD002BF85D /* JobQuiz.swift in Sources */,
 				A80884E224A4F73C0092EA07 /* ShoppingVC.swift in Sources */,
 				A83A80DD24926C7600D76D15 /* QuizColCell.swift in Sources */,
@@ -750,7 +758,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FunnyQuiz/FunnyQuiz.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 2J3K999PRZ;
 				INFOPLIST_FILE = FunnyQuiz/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -760,7 +768,7 @@
 				);
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = Fighting.FunnyQuiz;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Vocabulary Quizzes";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -773,7 +781,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FunnyQuiz/FunnyQuiz.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 2J3K999PRZ;
 				INFOPLIST_FILE = FunnyQuiz/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -783,7 +791,7 @@
 				);
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = Fighting.FunnyQuiz;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Vocabulary Quizzes";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

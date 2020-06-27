@@ -16,8 +16,10 @@ class ViewController: BaseViewController {
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var btLogin: UIButton!
     @IBOutlet weak var btRegister: UIButton!
+    @IBOutlet weak var btPlayNow: UIButton!
     
-
+    @IBOutlet weak var heightLogo: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -50,7 +52,15 @@ class ViewController: BaseViewController {
     }
     
     func setupUI() {
-        roundCorner(views: [btLogin, btRegister], radius: CORNER_BUTTON)
+        roundCorner(views: [btLogin, btRegister, btPlayNow], radius: CORNER_BUTTON)
+        
+        let currentScreen = UIDevice.current.screenType
+        switch currentScreen {
+        case .iPhones_5_5s_5c_SE:
+            heightLogo.constant = 160
+        default:
+            break
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -88,11 +98,20 @@ class ViewController: BaseViewController {
                 }
             }
         }
-
     }
     
     @IBAction func tapOnRegister(_ sender: Any) {
-        moveView(vc: RegisterVC(nibName: "RegisterVC", bundle: nil))
+        let vc = RegisterVC(nibName: "RegisterVC", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func tapOnPlayNow(_ sender: Any) {
+        try? Auth.auth().signOut()
+        SessionData.shared.cleanSession()
+        let vc = UIStoryboard(name: "Tabbar", bundle: nil).instantiateViewController(withIdentifier: "tabbarVC")
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     @IBAction func tapOnForgotPassword(_ sender: Any) {

@@ -67,6 +67,11 @@ class AccountVC: BaseViewController {
                 admin = false
                 collectionView.reloadData()
             }
+        } else { // CASE PLAY NOW
+            arrayUser[arrayUser.count - 1] = Menu(title: "Login", image: "ic_login")
+            arrayMenu = arrayUser
+            admin = false
+            collectionView.reloadData()
         }
     }
     
@@ -133,19 +138,22 @@ extension AccountVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
                 try? Auth.auth().signOut()
                 SessionData.shared.cleanSession()
 
-                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginVC")
-                vc.modalPresentationStyle = .overFullScreen
-                vc.modalTransitionStyle = .crossDissolve
-                self.present(vc, animated: true, completion: nil)
+                gotoMainScreen()
+                
             default:
                 break
             }
         } else {
             switch indexPath.row {
             case 0: // achievement
-                let vc = AchievementVC(nibName: "AchievementVC", bundle: nil)
-                vc.hidesBottomBarWhenPushed = true
-                self.navigationController?.pushViewController(vc, animated: true)
+                if SessionData.shared.userData != nil {
+                    let vc = AchievementVC(nibName: "AchievementVC", bundle: nil)
+                    vc.hidesBottomBarWhenPushed = true
+                    self.navigationController?.pushViewController(vc, animated: true)
+                } else {
+                    showToast(message: "You have to login")
+                }
+
                 
             case 1: // rating
                 DispatchQueue.global(qos: .background).async {
@@ -169,24 +177,37 @@ extension AccountVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
             case 3: // other app
                 showToast(message: "Coming soon!")
             case 4: // change password
-                let vc = ChangePasswordVC(nibName: "ChangePasswordVC", bundle: nil)
-                vc.modalTransitionStyle = .crossDissolve
-                vc.modalPresentationStyle = .overCurrentContext
-                vc.delegate = self
-                self.navigationController?.tabBarController?.tabBar.isHidden = true
-                self.present(vc, animated: true, completion: nil)
+                if SessionData.shared.userData != nil {
+                    let vc = ChangePasswordVC(nibName: "ChangePasswordVC", bundle: nil)
+                    vc.modalTransitionStyle = .crossDissolve
+                    vc.modalPresentationStyle = .overCurrentContext
+                    vc.delegate = self
+                    self.navigationController?.tabBarController?.tabBar.isHidden = true
+                    self.present(vc, animated: true, completion: nil)
+                } else {
+                    showToast(message: "You have to login")
+                }
+
             case 5: //
-                try? Auth.auth().signOut()
-                SessionData.shared.cleanSession()
-                
-                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginVC")
-                vc.modalPresentationStyle = .overFullScreen
-                vc.modalTransitionStyle = .crossDissolve
-                self.present(vc, animated: true, completion: nil)
+                if SessionData.shared.userData != nil {
+                    try? Auth.auth().signOut()
+                    SessionData.shared.cleanSession()
+                    gotoMainScreen()
+                } else {
+                    gotoMainScreen()
+                }
+
             default:
                 break
             }
         }
+    }
+    
+    func gotoMainScreen() {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "naviVC")
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        self.present(vc, animated: true, completion: nil)
     }
 }
 

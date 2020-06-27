@@ -73,10 +73,6 @@ class BaseViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    func moveView(vc: UIViewController) {
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
     func changeBackgroundColor(views: [UIView], color : UIColor) {
         views.forEach { (view) in
             view.backgroundColor = color
@@ -101,7 +97,7 @@ class BaseViewController: UIViewController {
         var style = ToastStyle()
         style.backgroundColor = #colorLiteral(red: 0.3450980392, green: 0.337254902, blue: 0.8392156863, alpha: 1)
         style.messageColor = .white
-        style.messageFont = UIFont.boldSystemFont(ofSize: 16)
+        style.messageFont = UIFont(name: "Quicksand-Bold", size: 16) ?? UIFont.boldSystemFont(ofSize: 16)
         self.view.makeToast(message, duration: duration, position: position, style: style)
     }
     

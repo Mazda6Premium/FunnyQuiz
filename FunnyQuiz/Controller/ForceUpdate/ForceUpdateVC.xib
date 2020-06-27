@@ -13,7 +13,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ForceUpdateVC" customModule="FunnyQuiz" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ForceUpdateVC" customModule="Vocabulary_Quizzes" customModuleProvider="target">
             <connections>
                 <outlet property="btnUpdate" destination="efM-Xs-zRO" id="4a1-wD-LfM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

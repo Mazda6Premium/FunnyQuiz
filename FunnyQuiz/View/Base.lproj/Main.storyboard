@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rYF-Iy-oqS">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -16,32 +16,32 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="loginVC" id="BYZ-38-t0r" customClass="ViewController" customModule="FunnyQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="BYZ-38-t0r" customClass="ViewController" customModule="Vocabulary_Quizzes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="c8Q-en-r14">
-                                <rect key="frame" x="0.0" y="30" width="414" height="190"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="190" id="0On-49-KVW"/>
+                                    <constraint firstAttribute="height" constant="200" id="0On-49-KVW"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWa-MW-X54">
-                                <rect key="frame" x="50" y="332" width="314" height="1"/>
+                                <rect key="frame" x="50" y="332" width="275" height="1"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="XNb-yc-j17"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Vocabulary Quizzes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCF-JX-Rmq">
-                                <rect key="frame" x="20" y="230" width="374" height="25"/>
+                                <rect key="frame" x="20" y="230" width="335" height="25"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yx3-XC-GKn">
-                                <rect key="frame" x="50" y="353" width="314" height="36"/>
+                                <rect key="frame" x="50" y="353" width="275" height="36"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="hRq-Ud-pD6"/>
@@ -51,14 +51,14 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BV9-xo-JrJ">
-                                <rect key="frame" x="50" y="390" width="314" height="1"/>
+                                <rect key="frame" x="50" y="390" width="275" height="1"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="YvT-k2-XvN"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5J2-dC-o6x">
-                                <rect key="frame" x="251" y="397" width="113" height="29"/>
+                                <rect key="frame" x="212" y="397" width="113" height="29"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="13"/>
                                 <state key="normal" title="Forgot password?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -68,7 +68,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0HU-8X-Ulr">
-                                <rect key="frame" x="50" y="295" width="314" height="36"/>
+                                <rect key="frame" x="50" y="295" width="275" height="36"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="ckR-BR-sdh"/>
@@ -77,32 +77,48 @@
                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwO-eQ-PCa">
-                                <rect key="frame" x="132" y="466" width="150" height="40"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="e40-aB-a2F"/>
-                                    <constraint firstAttribute="width" constant="150" id="fkY-tQ-ily"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="16"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="tapOnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g2s-3x-Xb8"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBG-Ho-N5x">
-                                <rect key="frame" x="10" y="516" width="394" height="32"/>
+                                <rect key="frame" x="10" y="516" width="355" height="32"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="16"/>
                                 <state key="normal" title="Don't have account? Register here">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="tapOnRegister:" destination="BYZ-38-t0r" eventType="touchUpInside" id="45B-cS-3Kr"/>
+                                    <action selector="tapOnRegister:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zzI-mW-MTb"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0e4-fo-oc1">
+                                <rect key="frame" x="50" y="456" width="275" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAF-pK-73K">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="16"/>
+                                        <state key="normal" title="Play now">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapOnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qyp-HO-7X8"/>
+                                            <action selector="tapOnPlayNow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hE1-UN-WiP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwO-eQ-PCa">
+                                        <rect key="frame" x="147.5" y="0.0" width="127.5" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="16"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapOnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g2s-3x-Xb8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qLQ-Fc-6GN"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.65098039215686276" green="0.36470588235294116" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -113,19 +129,20 @@
                             <constraint firstItem="c8Q-en-r14" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CzD-kE-bSZ"/>
                             <constraint firstItem="yx3-XC-GKn" firstAttribute="top" secondItem="qWa-MW-X54" secondAttribute="bottom" constant="20" id="EgW-gI-GVh"/>
                             <constraint firstItem="c8Q-en-r14" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H99-4X-zcT"/>
-                            <constraint firstItem="dwO-eQ-PCa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KEQ-2p-pYA"/>
-                            <constraint firstItem="c8Q-en-r14" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="LKo-vi-4Pg"/>
+                            <constraint firstItem="c8Q-en-r14" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="LKo-vi-4Pg"/>
                             <constraint firstItem="BV9-xo-JrJ" firstAttribute="top" secondItem="yx3-XC-GKn" secondAttribute="bottom" constant="1" id="LRg-d7-Wbg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c8Q-en-r14" secondAttribute="trailing" id="Olf-Ut-xuI"/>
                             <constraint firstItem="yx3-XC-GKn" firstAttribute="leading" secondItem="0HU-8X-Ulr" secondAttribute="leading" id="OsG-Id-yqY"/>
                             <constraint firstItem="5J2-dC-o6x" firstAttribute="trailing" secondItem="yx3-XC-GKn" secondAttribute="trailing" id="R4Q-b0-cHc"/>
                             <constraint firstItem="0HU-8X-Ulr" firstAttribute="top" secondItem="qCF-JX-Rmq" secondAttribute="bottom" constant="40" id="T6T-tV-3Wo"/>
+                            <constraint firstItem="0e4-fo-oc1" firstAttribute="leading" secondItem="yx3-XC-GKn" secondAttribute="leading" id="Vrf-Eo-WNN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bBG-Ho-N5x" secondAttribute="trailing" constant="10" id="XPw-CI-PgI"/>
+                            <constraint firstItem="0e4-fo-oc1" firstAttribute="trailing" secondItem="yx3-XC-GKn" secondAttribute="trailing" id="YlE-iL-Hj3"/>
                             <constraint firstItem="BV9-xo-JrJ" firstAttribute="trailing" secondItem="qWa-MW-X54" secondAttribute="trailing" id="YxI-gm-T5Z"/>
-                            <constraint firstItem="bBG-Ho-N5x" firstAttribute="top" secondItem="dwO-eQ-PCa" secondAttribute="bottom" constant="10" id="Z4K-JB-88q"/>
-                            <constraint firstItem="dwO-eQ-PCa" firstAttribute="top" secondItem="5J2-dC-o6x" secondAttribute="bottom" constant="40" id="Z7M-lT-dZg"/>
                             <constraint firstItem="qWa-MW-X54" firstAttribute="top" secondItem="0HU-8X-Ulr" secondAttribute="bottom" constant="1" id="ZCu-mN-LAz"/>
                             <constraint firstItem="5J2-dC-o6x" firstAttribute="top" secondItem="BV9-xo-JrJ" secondAttribute="bottom" constant="6" id="ay6-IK-ipP"/>
+                            <constraint firstItem="0e4-fo-oc1" firstAttribute="top" secondItem="5J2-dC-o6x" secondAttribute="bottom" constant="30" id="dQy-fX-32Z"/>
+                            <constraint firstItem="bBG-Ho-N5x" firstAttribute="top" secondItem="0e4-fo-oc1" secondAttribute="bottom" constant="20" id="jvj-bU-heb"/>
                             <constraint firstItem="yx3-XC-GKn" firstAttribute="trailing" secondItem="0HU-8X-Ulr" secondAttribute="trailing" id="nWB-hB-TNR"/>
                             <constraint firstItem="0HU-8X-Ulr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="oRJ-69-gJ1"/>
                             <constraint firstItem="BV9-xo-JrJ" firstAttribute="leading" secondItem="qWa-MW-X54" secondAttribute="leading" id="pDh-gk-vuF"/>
@@ -138,7 +155,9 @@
                     <navigationItem key="navigationItem" id="k9A-YR-fM4"/>
                     <connections>
                         <outlet property="btLogin" destination="dwO-eQ-PCa" id="2Op-Ag-fZZ"/>
+                        <outlet property="btPlayNow" destination="hAF-pK-73K" id="gvz-5H-anF"/>
                         <outlet property="btRegister" destination="bBG-Ho-N5x" id="uVg-KC-nSW"/>
+                        <outlet property="heightLogo" destination="0On-49-KVW" id="H86-wM-aY9"/>
                         <outlet property="imgLogo" destination="c8Q-en-r14" id="5iV-3R-Tc5"/>
                         <outlet property="tfEmail" destination="0HU-8X-Ulr" id="xlg-Gn-TPr"/>
                         <outlet property="tfPassword" destination="yx3-XC-GKn" id="AUA-6t-VeN"/>
@@ -151,10 +170,10 @@
         <!--Navigation Controller-->
         <scene sceneID="0Tt-HA-ZRj">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rYF-Iy-oqS" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="naviVC" automaticallyAdjustsScrollViewInsets="NO" id="rYF-Iy-oqS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="kw2-tb-tRT">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.45098039220000002" green="0.23137254900000001" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
