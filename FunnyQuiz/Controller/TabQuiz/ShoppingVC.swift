@@ -92,11 +92,17 @@ extension ShoppingVC: SKProductsRequestDelegate, SKPaymentTransactionObserver {
             case .failed, .deferred:
                 SKPaymentQueue.default().finishTransaction(tran)
                 SKPaymentQueue.default().remove(self)
+                DispatchQueue.main.async {
+                    self.stopAnimating()
+                }
                 break
                 
             default:
                 SKPaymentQueue.default().finishTransaction(tran)
                 SKPaymentQueue.default().remove(self)
+                DispatchQueue.main.async {
+                    self.stopAnimating()
+                }
                 break
             }
         }
