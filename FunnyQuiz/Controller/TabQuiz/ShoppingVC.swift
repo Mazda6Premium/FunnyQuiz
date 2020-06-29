@@ -31,8 +31,8 @@ class ShoppingVC: BaseViewController {
     }
     
     func fetchProducts() {
-        // Fighting.FunnyQuiz.VocabularyQuizzes
-        let request = SKProductsRequest(productIdentifiers: ["Fighting.FunnyQuiz.VocabularyQuizzes"])
+        // Fighting.FunnyQuiz.Quizzes
+        let request = SKProductsRequest(productIdentifiers: ["Fighting.FunnyQuiz.Quizzes"])
         request.delegate = self
         request.start()
     }
