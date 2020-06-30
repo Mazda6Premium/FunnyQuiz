@@ -44,19 +44,15 @@ class RevenueVC: BaseViewController {
     }
     
     func getDataUser() {
-        databaseReference.child("Users").observe(.childAdded, with: { (snapshot) in
+        databaseReference.child("BuyInApp").observe(.childAdded, with: { (snapshot) in
             self.startAnimating()
-            databaseReference.child("Users").child(snapshot.key).observe(.value) { (data) in
-                if let dict = data.value as? [String: Any] {
-                    let user = User(dict: dict)
-                    if user.buyQuizzes {
-                        self.userBuyApp.append(user.buyQuizzes)
-                        let revenue = Int64((self.userBuyApp.count - 2) * 31500)
-                        self.lbA1.text = "User buy: \(self.userBuyApp.count)"
-                        self.lbA3.text = self.formatCurrencyInt64(revenue)
-                    }
-                    self.stopAnimating()
-                }
+            databaseReference.child("BuyInApp").child(snapshot.key).observe(.value) { (data) in
+                let dataCount = data.childrenCount
+                let revenue = Int64((dataCount - 1) * 31500)
+                self.lbA1.text = "User buy: \(self.userBuyApp.count)"
+                self.lbA3.text = self.formatCurrencyInt64(revenue)
+                self.stopAnimating()
+                
             }
         })
     }

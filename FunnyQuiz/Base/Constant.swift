@@ -20,6 +20,9 @@ let CORNER_VIEW_LOADING: CGFloat = 8
 
 let databaseReference = Database.database().reference()
 let storageReference = Storage.storage().reference()
+let userDefaults = UserDefaults.standard
 
 let ADMIN_ID = "DaCGHSe1rEgsxU4hCXXMYULF5zS2"
+
+let KEY_BUY_QUIZZES = "BUY_QUIZZES"
 

@@ -82,8 +82,8 @@ extension QuizVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         cell.lbQuizMenu.text = menu.category
         cell.imgQuizMenu.image = UIImage(named: menu.image)
         
-        if let user = userData {
-            if !user.buyQuizzes {
+        if let buyInApp = userDefaults.value(forKey: KEY_BUY_QUIZZES) as? Bool {
+            if !buyInApp {
                 switch indexPath.row {
                 case 0, 1:
                     cell.viewDim.isHidden = true
@@ -120,8 +120,8 @@ extension QuizVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let user = userData {
-            if !user.buyQuizzes {
+        if let buyInApp = userDefaults.value(forKey: KEY_BUY_QUIZZES) as? Bool {
+            if !buyInApp {
                 switch indexPath.row {
                 case 0, 1:
                     let vc = PlayingQuizVC(nibName: "PlayingQuizVC", bundle: nil)
@@ -131,6 +131,7 @@ extension QuizVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                 default:
                     let vc = ShoppingVC(nibName: "ShoppingVC", bundle: nil)
                     vc.hidesBottomBarWhenPushed = true
+                    vc.delegate = self
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
             } else {
@@ -149,6 +150,7 @@ extension QuizVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             default:
                 let vc = ShoppingVC(nibName: "ShoppingVC", bundle: nil)
                 vc.hidesBottomBarWhenPushed = true
+                vc.delegate = self
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
@@ -157,6 +159,13 @@ extension QuizVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     @objc func tapOnShopping() {
         let vc = ShoppingVC(nibName: "ShoppingVC", bundle: nil)
         vc.hidesBottomBarWhenPushed = true
+        vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension QuizVC: ShoppingVCDelegate {
+    func buyQuizzesSuccess() {
+        collectionView.reloadData()
     }
 }

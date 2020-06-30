@@ -68,7 +68,7 @@ class RegisterVC: BaseViewController {
             } else {
                 if let id = authData?.user.uid {
 
-                    let user = User(email: email, id: id, password: password, buyQuizzes: false)
+                    let user = User(email: email, id: id, password: password)
                     databaseReference.child("Users").child(id).setValue(user.asDictionary())
                     
                     self.stopAnimating()

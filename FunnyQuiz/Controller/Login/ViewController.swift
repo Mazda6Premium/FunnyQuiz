@@ -24,7 +24,7 @@ class ViewController: BaseViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupUI()
-//        fakeData()
+        fakeData()
         checkForceUpdate()
     }
     
@@ -81,6 +81,8 @@ class ViewController: BaseViewController {
                 } else {
                     // SAVE TO SESSION DATA
                     if let userId = authData?.user.uid {
+                        databaseReference.child("Users").child(userId).updateChildValues(["password": self.tfPassword.text!])
+                        
                         databaseReference.child("Users").child(userId).observe(.value) { (snapshot) in
                             if let dict = snapshot.value as? [String: Any] {
                                 let user = User(dict: dict)
